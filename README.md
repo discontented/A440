@@ -4,7 +4,6 @@
 - [ ] Top ranked song should be the next played song.
 - [ ] Each user has a set number of votes.
 - [ ] Each user's instance of the app must be synchronized.  Any updates to songs or votes displayed must be seen by all users.
-- [ ] 
 
 
 ## Non-functional
