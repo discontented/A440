@@ -8,3 +8,4 @@
     * Port: 22
     * Connection type: SSH
 4. Store the session
+5. changes
