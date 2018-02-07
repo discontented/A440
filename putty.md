@@ -8,3 +8,5 @@
     * Port: 22
     * Connection type: SSH
 4. Store the session
+
+![putty instructions](images/putty.gif)
