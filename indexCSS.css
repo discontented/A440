@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+
+h1 {
+	text-align:center;
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-weight:lighter;
+	font-size:32px;
+	font-variant:small-caps;
+}
+
+nav {
+	background-image:url(images/string3.jpg);
+	background-position:center;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-variant:small-caps;
+	border:2px solid #FFF;
+	font-weight:700;
+}
+
+
+table {
+	width:40%;
+	padding:10px;
+}
+
+td a {
+	color:#FFF;
+	text-decoration:none;
+}
+
+td a:hover {
+	background-color:#FFF;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+	color:#000;
+	-webkit-transition:color 1000ms linear;
+    -ms-transition:color 1000ms linear;
+    transition:color 1000ms linear;
+	
+	
+}
+
+body {
+	background-image:url(images/woodguitar2.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+
+	
+}
+
+
+footer {
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	text-align:center;
+	padding:5px;
+	position:absolute;
+	width:97%;
+	bottom:0;
+	text-align:center;
+}
+
