@@ -1,4 +1,4 @@
-[Full Putty Guide for AWS] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
+[Full Putty Guide for AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
 
 1. [Download Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 2. [Download Seap1.ppk](https://drive.google.com/a/oakland.edu/file/d/1yaxXb7N_WCUBjDam98AJIpfUinhO8hQ0/view?usp=sharing)
