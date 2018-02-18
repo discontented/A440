@@ -1,3 +1,10 @@
+# ToC
+{% for md_file in site.static_files %}
+    {% if file.extname == ".md" %}
+        * [{{ file.path }}]({{ site.baseurl }}{{ file.path }})
+    {% endif %}
+{% endfor %}
+
 # PuTTY Instructions
 {% include_relative putty.md %}
 
