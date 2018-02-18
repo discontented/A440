@@ -24,7 +24,7 @@ ON alias1.foreignKey = alias2.primaryKey;
 
 ```
 SELECT
-	column1,
+    column1,
     column2,
     table2.column1
 FROM table1
