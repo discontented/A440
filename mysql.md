@@ -1,3 +1,8 @@
+```
+layout: page
+title: MySQL
+```
+
 # MySQL Cheat Sheet
 
 ## SELECT
