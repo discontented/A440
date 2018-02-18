@@ -1,7 +1,7 @@
 # ToC
 {% for file in site.static_files %}
     {% if file.extname == ".md" %}
-        * [{{ file.path }}]({{ site.baseurl }}{{ file.path }})
+* [{{ file.path }}]({{ site.baseurl }}{{ file.path }})
     {% endif %}
 {% endfor %}
 
