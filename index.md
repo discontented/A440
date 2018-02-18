@@ -5,9 +5,16 @@
     {% endif %}
 {% endfor %}
 
-   {% for item in site.data.samplelist.docs %}
-      <li><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
-   {% endfor %}
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{ post.date }}</span>
+  </p>
+  <div class="content">
+    {{ post.content }}
+  </div>
+{% endfor %}
 
 # PuTTY Instructions
 {% include_relative putty.md %}
