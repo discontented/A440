@@ -1,9 +1,9 @@
-# ToC
-{% for file in site.static_files %}
+<!-- # ToC -->
+<!-- {% for file in site.static_files %}
     {% if file.extname == ".md" %}
 * [{{ file.basename }}](#{{ file.basename }})
     {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 {% for file in site.static_files %}
     {% if file.extname == ".md" %}
