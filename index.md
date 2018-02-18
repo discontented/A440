@@ -7,7 +7,6 @@
 
 {% for file in site.static_files %}
     {% if file.extname == ".md" %}
-        #{{file.basename}}
         {% include_relative {{file.name}}}
     {% endif %}
 {% endfor %}
