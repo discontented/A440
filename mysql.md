@@ -8,7 +8,7 @@ SELECT column_name FROM table_name
 
 ## JOINS
 ### Inner Join
-```
+```mysql
 SELECT 
     column1,
     column2
@@ -22,7 +22,7 @@ ON alias1.foreignKey = alias2.primaryKey;
 * Looks for inequalities on both sides of a query
 * Will show all of the rows in both tables
 
-```
+```mysql
 SELECT
     column1,
     column2,
@@ -41,7 +41,7 @@ ON table2.table2ID  = table1.table2ID
 * Will display everything from table2 and the related values of table 1.
 
 ## Subquery
-```
+```mysql
 SELECT OrderKey
 FROM OrderDetail
 WHERE  productKey = 
@@ -52,7 +52,7 @@ WHERE  productKey =
     )
 ```
 * To use a subquery within an INSERT it must look like this:
-```
+```mysql
 INSERT INTO table
     (columnName, columnName)
 SELECT fk_column1, fk_column2
@@ -68,14 +68,14 @@ WHERE fk_columnName = 'string'
 
 ### Intersect
 * Finds where two datasets collide and what they have in common. (common rows)
-```
+```mysql
 SELECT columnKey
 FROM table1
 INTERSECT
 SELECT columnKey
 FROM table2
 ```
-```
+```mysql
 SELECT columnKey, columnName
 FROM table1
 JOIN table3
@@ -88,7 +88,7 @@ ON table2.columnKey = table3.columnKey
 ```
 
 ## Creating a Table
-```
+```mysql
 CREATE TABLE table_name (
     name_id int NOT NULL identity(1,1), 
     foreign_id int NOT NULL,
@@ -99,12 +99,12 @@ CREATE TABLE table_name (
 ```
 
 ## UPDATE
-```
+```mysql
 UPDATE table
 SET old_field = new_value
 WHERE name_field = 'name_value';
 ```
-```
+```mysql
 UPDATE
     table
 SET
@@ -119,7 +119,7 @@ WHERE columnID IN
 ```
 
 ## INSERT
-```
+```mysql
 INSERT INTO table
     (name_field, year_field, currency_field)
 VALUES
@@ -129,13 +129,13 @@ VALUES
 ```
 
 ### Positional Insert
-```
+```mysql
 INSERT INTO TABLE table SET name_field = ‘name_val’ , year_field = ‘year_val’;
 ```
 
 ## ALTER
 ### Add/drop columns
-```
+```mysql
 ALTER TABLE tableName
 ADD columnName datatype() NULL/NOT NULL
 CONSTRAINT constraint_def DEFAULT default_value 
@@ -145,12 +145,12 @@ ALTER TABLE tableName DROP COLUMN columnName
 ```
 
 ### Change Data Type
-```
+```mysql
 ALTER TABLE tableName ALTER COLUMN columnName datatype()
 ```
 
 ### Change default or nullability
-```
+```mysql
 ALTER TABLE tableName
 ALTER COLUMN columnName datatype() NULL;
 
@@ -159,7 +159,7 @@ ADD DEFAULT ‘default text’ FOR columnName;
 ```
 
 ### Change constraints
-```
+```mysql
 ALTER TABLE tableName
 ADD CONSTRAINT constraintName CHECK (check statement)
 
@@ -169,28 +169,28 @@ DROP CONSTRAINT constraintName
 
 ## WHERE
 ### LIKE
-```
+```mysql
 WHERE column LIKE '%pattern%'
 ```
 
 ### IN
-```
+```mysql
 WHERE column in (‘string’, ‘string’)
 ```
 
 * Show all fields where column is equal to null
-```
+```mysql
 WHERE column is null
 ```
 
 ## GROUP BY
-```
+```mysql
 SELECT column
 FROM table
 GROUP BY column
 ```
 
-```
+```mysql
 SELECT column
 	aggregate(column * constant);
 FROM table
@@ -202,7 +202,7 @@ HAVING aggregate(column * constant) <>= condition;
 * SUM
 * AVG
 * COUNT
-```
+```mysql
 SELECT 
 	aggregate(column) as [alias]
 FROM table
