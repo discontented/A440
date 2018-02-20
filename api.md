@@ -44,6 +44,7 @@ $(document).ready(function() {
 * Allows SoundCloud tracks to be embedded into a website.
 * To embed a player, provide a track permalink and a target element for the player.
 * Tracks are identified with a track id
+* `SC.oEmbed` embeds a player widget.
 
 ### Steps
 1. Add the target element in the HTML file where the player will be displayed.
@@ -54,7 +55,28 @@ $(document).ready(function() {
 ```js
 $("#player")
 ```
+* Embedding the player to target div
+```js
+SC.oEmbed(track.permalink_url, document.getElementById('player'));
+```
 
+## Streaming Music
+* `SC.stream` creates objects that will allow you to play the music.
+
+* Example code which returns a `sound` object from the track.
+  * By clicking on buttons #start or #stop the music will start or stop.
+```js
+    SC.stream('/tracks/293', function(sound) {
+        $("#start").click(function(e) {
+            e.preventDefault();
+            sound.start();
+        })
+        $("stop").click(function(e) {
+            e.preventDefault();
+            sound.stop();        
+        })
+    })
+```
 
 [API Reference](https://developers.soundcloud.com/docs/api/html5-widget#api)
 
