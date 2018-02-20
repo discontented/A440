@@ -7,14 +7,18 @@
 * SC is the soundcloud object from the JS SC SDK
 * Uses methods named for the type of HTTP request being made.
 
+## Register client_id
 * Must register client_id to SoundCloud.
 ```js
 SC.initialize({
     client_id: 'YOUR_CLIENT_ID'
 });
 ```
+
+## Connecting to SoundCloud
 `SC.connect` allows connecting to a SoundCloud account.
 
+## GET//Retrieving Info from SoundCloud
 ```js
 SC.get(
     <relative endpoint URL>,
@@ -33,6 +37,22 @@ $(document).ready(function() {
     });
   });
 });
+```
+
+## oEmbed
+
+* Allows SoundCloud tracks to be embedded into a website.
+* To embed a player, provide a track permalink and a target element for the player.
+* Tracks are identified with a track id
+
+### Steps
+1. Add the target element in the HTML file where the player will be displayed.
+```html
+<div id="player"></div>
+```
+* You can target this element through jQuery with:
+```js
+$("#player")
 ```
 
 
