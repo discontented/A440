@@ -1,6 +1,6 @@
 ## Soundcloud
 
-* Uses HTTP requrests to a set of endpoint URLs to request info and perform actions.
+* Uses [HTTP requests](web-dev.md#HTTP-Requests) to a set of endpoint URLs to request info and perform actions.
 
 ### Javascript SDK
 
