@@ -7,6 +7,9 @@
 * SC is the soundcloud object from the JS SC SDK
 * Uses methods named for the type of HTTP request being made.
 
+### Header Script
+`<script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>`
+
 ## Register client_id
 * Must register client_id to SoundCloud.
 ```js
@@ -78,6 +81,10 @@ SC.oEmbed(track.permalink_url, document.getElementById('player'));
     })
 ```
 
+## Resources
+
 [API Reference](https://developers.soundcloud.com/docs/api/html5-widget#api)
 
 [Codecademy Course](https://www.codecademy.com/courses/javascript-intermediate-en-txGOj/0/1)
+
+[SC HTML Widget](https://developers.soundcloud.com/blog/html5-widget-api)
