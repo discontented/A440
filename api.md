@@ -1,3 +1,21 @@
+<!-- TOC -->
+
+- [Soundcloud](#soundcloud)
+    - [Javascript SDK](#javascript-sdk)
+    - [Header Script](#header-script)
+    - [Register client_id](#register-client_id)
+    - [Connecting to SoundCloud Account](#connecting-to-soundcloud-account)
+    - [GET//Retrieving Info from SoundCloud](#getretrieving-info-from-soundcloud)
+    - [oEmbed](#oembed)
+        - [Steps](#steps)
+    - [Getting Track Info](#getting-track-info)
+    - [Streaming Music](#streaming-music)
+        - [Stream a Song](#stream-a-song)
+    - [Issues](#issues)
+    - [Resources](#resources)
+
+<!-- /TOC -->
+
 # Soundcloud
 
 * Uses [HTTP requests](web-dev.md#HTTP-Requests) to a set of endpoint URLs to request info and perform actions.
