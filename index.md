@@ -1,3 +1,6 @@
+# ToC
+[api](api.md)
+
 # PuTTY Instructions
 {% include_relative putty.md %}
 
