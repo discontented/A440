@@ -1,8 +1,7 @@
 # ToC
-[api](api.md)
 
 {% for file in site.static_files %}
-{% if file.extname == ".md" %}
+{% if file.extname == ".md" AND file.basename != "index" %}
 [{{ file.basename }}]({{site.baseurl}}/{{file.basename}}.html)
 {% endif %}
 {% endfor %}
