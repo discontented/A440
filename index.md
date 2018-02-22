@@ -3,7 +3,7 @@
 
 {% for file in site.static_files %}
 {% if file.extname == ".md" %}
-[{{ file.basename }}]({{site.baseurl}}{{file.path}})
+[{{ file.basename }}]({{site.baseurl}}{{file.name}}.html)
 {% endif %}
 {% endfor %}
 
