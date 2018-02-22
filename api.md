@@ -157,6 +157,11 @@ $(document).ready(function() {
   });
 ```
 
+## Widget API
+
+Include [this script](https://w.soundcloud.com/player/api.js) to use the SoundCloud Widget API
+* This allows control of the widget on the page the widget is inserted into.
+
 ## Issues
 * Cap on access to SC API.
     * Must wait over a time period to be allowed access again through the API.
@@ -169,3 +174,5 @@ $(document).ready(function() {
 [Codecademy Course](https://www.codecademy.com/courses/javascript-intermediate-en-txGOj/0/1)
 
 [SC HTML Widget](https://developers.soundcloud.com/blog/html5-widget-api)
+
+[Widget API](https://developers.soundcloud.com/docs/api/html5-widget)
