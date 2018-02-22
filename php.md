@@ -73,6 +73,7 @@ try {//Connects to database and creates object
 
 ### Querying the Database
 * `$db->query` can execute a single SQL statement.
+
 ```php
 try {//Creates object with query results
 	$results = $db->query("SELECT * FROM table_name;");
@@ -87,6 +88,7 @@ $db_array = $results->fetchAll(PDO::FETCH_ASSOC);
 * `$db_array` is an array of the results from the database query.
 
 ### Updating the Database
+
 * `$db->prepare()` is generally the safer method to execute SQL commands.
 * `$db->prepare()` returns an object.
 	* It is best to store this object in a variable. `$results = $db->prepare()`
