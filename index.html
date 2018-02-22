@@ -1,35 +1,50 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Project_A440</title>
-<link rel="stylesheet" href="indexCSS.css"> 
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>A440</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+  
+  <!--  jQuery script  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
 </head>
 
-<!-- TESTING 123 -->
 <body>
-<nav>
-<table>
-<tr>
-<td><a href="index.html" title="Home">Home</a></td>
-<td><a href="index.html" title="How">How To</a></td>
-<td><a href="index.html" title="Contact">Contact Us</a></td>
-</tr>
-</table>
-</nav>
+  
+  <div id="container"></div>
+  <div id="title"></div>
+  <div id="player"></div>
+  
+<!--  SC Widget  -->
+<!--   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+  
+<iframe id="sc-widget" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1848538&show_artwork=true"></iframe>
+<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function(){
+    var widgetIframe = document.getElementById('sc-widget'),
+        widget       = SC.Widget(widgetIframe),
+        newSoundUrl = 'http://api.soundcloud.com/tracks/13692671';
 
-
-
-<h1>Project_A440</h1>
-
-
+    widget.bind(SC.Widget.Events.READY, function() {
+      // load new widget
+      widget.bind(SC.Widget.Events.FINISH, function() {
+        widget.load(newSoundUrl, {
+          show_artwork: false
+        });
+      });
+    });
+  }());
+</script> -->
+  
+  
+  <!--  SoundCloud Script  -->
+  <script src="scripts/index.js"></script>
 
 </body>
-
-
-
-<footer>
-Copyright &copy; 2018. All rights reserved
-</footer>
-
 </html>
