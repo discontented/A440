@@ -1,5 +1,33 @@
 # MySQL Cheat Sheet
 
+<!-- TOC -->
+
+- [MySQL Cheat Sheet](#mysql-cheat-sheet)
+    - [SELECT](#select)
+    - [JOINS](#joins)
+        - [Inner Join](#inner-join)
+        - [Outer Join](#outer-join)
+    - [Subquery](#subquery)
+    - [Set Operators](#set-operators)
+        - [Union](#union)
+        - [Intersect](#intersect)
+    - [Creating a Table](#creating-a-table)
+    - [UPDATE](#update)
+    - [INSERT](#insert)
+        - [Positional Insert](#positional-insert)
+    - [ALTER](#alter)
+        - [Add/drop columns](#adddrop-columns)
+        - [Change Data Type](#change-data-type)
+        - [Change default or nullability](#change-default-or-nullability)
+        - [Change constraints](#change-constraints)
+    - [WHERE](#where)
+        - [LIKE](#like)
+        - [IN](#in)
+    - [GROUP BY](#group-by)
+        - [Aggregate Functions](#aggregate-functions)
+
+<!-- /TOC -->
+
 ## SELECT
 ```mysql
 SELECT * FROM TABLE
