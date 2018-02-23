@@ -89,9 +89,19 @@ $db_array = $results->fetchAll(PDO::FETCH_ASSOC);
 
 ### Updating the Database
 
+```php
+$results = $db->prepare("SELECT * FROM :placeholder");
+$results->execute(':placeholder' => $phpVariable);
+```
+
 * `$db->prepare()` is generally the safer method to execute SQL commands.
+* `prepare()` takes a SQL statement as an argument but does not execute it.
+* `prepare()` allows for [placeholder](#placeholders) arguments within the SQL statement.
+* `execute()` runs the SQL statement.
 * `$db->prepare()` returns an object.
 	* It is best to store this object in a variable. `$results = $db->prepare()`
+
+#### Placeholders
 * Placeholder text is prepended by a colon (:) within the SQL statement.
 	* `:placeHolder`
 * When `results->execute()` is called, it will replace the placeholder text with the value of a php variable.
