@@ -16,6 +16,20 @@
 
 <!-- /TOC -->
 
+# Quick Summary of Steps
+1. Add JS SDK script
+```js
+<script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+<script>
+```
+2. Initialize SoundCloud API with client_id credentials.
+```js
+SC.initialize({
+    client_id: '340f063c670272fac27cfa67bffcafc4'
+});
+```
+
+
 # Soundcloud
 
 * Uses [HTTP requests](web-dev.md#HTTP-Requests) to a set of endpoint URLs to request info and perform actions.
