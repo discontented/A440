@@ -22,16 +22,20 @@
 
 ## Javascript SDK
 
-* SC is the soundcloud object from the JS SC SDK
-* Uses methods named for the type of HTTP request being made.
-
-## Header Script
+* SC is the SoundCloud javascript object from the JS SC SDK.
 * To initialize the Javascript SDK, add a `script` tag to the HTML.
 `<script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>`
+* To use the SoundCloud API, you call methods off the SC object.
+```js
+SC.initialize();
+SC.get();
+...
+```
 
 ## Register client_id
 * Must register client_id to SoundCloud that identifies the application to SoundCloud.
   * I got this client_id from Codecademy since SoundCloud isn't allowing new apps to be registered for their API.
+
 ```js
 SC.initialize({
     client_id: '340f063c670272fac27cfa67bffcafc4'
@@ -44,6 +48,7 @@ SC.initialize({
 
 ## GET//Retrieving Info from SoundCloud
 * Basic Syntax
+
 ```js
 SC.get(
     <relative endpoint URL>,
@@ -53,6 +58,20 @@ SC.get(
     }
     )
 ```
+
+## Getting Track Info
+
+```js
+$(document).ready(function() {
+    SC.get('/tracks/293', function(track) {
+        $('#player').html(track.title);
+    });
+});
+```
+
+## Searching More than 1 Song
+* Example:
+    * Search for all songs under the genre rock and append to a div with id results
 
 ```js
 $(document).ready(function() {
@@ -71,6 +90,27 @@ $(document).ready(function() {
     * track id: `/tracks/293`
     * link: `http://soundcloud.com/forss/flickermood`
 * `SC.oEmbed` returns an object with properties that allow you to embed a player, modify the size, etc.
+
+### Embedding the player.
+* Since the response from the server is a JSON object, one of its properties is the HTML for the player.
+* To embed the player, you must call the `.html` property of the returned object.
+```js
+SC.oEmbed('<direct link>').then(function(embed) {
+    $("#player").html(embed.html);
+})
+```
+
+* Displays properties in log of embedded player.
+```js
+  SC.oEmbed('http://soundcloud.com/forss/flickermood', {
+    auto_play: true
+  }).then(function(embed){
+    console.log('oEmbed response: ', embed);
+  });
+  
+```
+
+### Properties
 * Autoplay
     * To turn autoplay on and off, you must pass a property and key when you GET, or send a request to SC, for the embed player.
     ```js
@@ -81,26 +121,8 @@ $(document).ready(function() {
         //code
     })
     ```
-* Embedding the player.
-    * Since the response from the server is a JSON object, one of its properties is the HTML for the player.
-    * To embed the player, you must call the `.html` property of the returned object.
-    ```js
-    SC.oEmbed('<direct link>').then(function(embed) {
-        $("#player").html(embed.html);
-    })
-    ```
 
-```js
-  SC.oEmbed('http://soundcloud.com/forss/flickermood', {
-    auto_play: true
-  }).then(function(embed){
-    console.log('oEmbed response: ', embed);
-  });
-  
-```
-
-
-### Steps
+### Steps for Embedding the Player
 
 1. Add the target element in the HTML file where the player will be displayed.
 ```html
@@ -121,15 +143,7 @@ $(document).ready(function() {
 });
 ```
 
-## Getting Track Info
 
-```js
-$(document).ready(function() {
-    SC.get('/tracks/293', function(track) {
-        $('#player').html(track.title);
-    });
-});
-```
 
 ## Streaming Music
 * `SC.stream` creates objects that will allow you to play the music.
