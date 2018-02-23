@@ -102,6 +102,7 @@ $results->execute(':placeholder' => $phpVariable);
 	* It is best to store this object in a variable. `$results = $db->prepare()`
 
 #### Placeholders
+
 * Placeholder text is prepended by a colon (:) within the SQL statement.
 	* `:placeHolder`
 * When `results->execute()` is called, it will replace the placeholder text with the value of a php variable.
