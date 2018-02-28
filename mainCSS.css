@@ -67,7 +67,6 @@ footer {
 	border:3px solid #FFF;
 	background-color:#000;
 	margin:auto;
-	opacity:.5;
 	text-align:center;
 }
 
@@ -85,14 +84,8 @@ footer {
 }
 
 #search{
-	width:35%;	
-	height:10%;
-	min-width:75px;
-	min-height:20px;
-	border:3px solid #000;
-	background-color:#FFF;
 	margin:auto;
-	opacity:.7;
+	opacity:.8;
 	margin-top:10px;
 	text-align:center;
 }
@@ -110,3 +103,29 @@ footer {
 	text-align:center;
 }
 	
+#maincontainer {
+	border:5px dashed #FFF;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #FFF;
+	border:3px solid #000;
+}
+
+input {
+	margin: 5px;
+	border:3px solid #000;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+	
+}
+
+input:focus {
+	border:4px solid #FFF;
+	background-color:#E9E9E9;
+
+}
+
+select {
+	border:3px solid #000;
+}
