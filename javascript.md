@@ -6,9 +6,9 @@
     * Javascript should enhance the user's experience but not be required due to legacy browsers, users disabling Javascript, and page downloading issues.
 * Dynamic types
     * Variables don't have types but the objects they refer to do.
-    * 
+
 # CS Concepts
-* Technically Javascript does not have classes but you can create something like them with (constructor functions)[#Classes]
+* Technically Javascript does not have classes but you can create something like them with [constructor functions](#classes)
 
 # Loading Javascript
 * Javascript can be inserted directly in the HTML with a `<script>` tag
@@ -43,27 +43,60 @@ function functionName(var1,var2,...,varX)
 # Objects
 
 ## Literal Notation
+
+#### Declaration then Initialization
+* The object has been created but no properties or methods assigned.
+```js
+var objectName = {};
+
+objectName.property = "string";
+objectName.methodName = function(par1) {
+    return par1;
+}
+```
+
+#### Declare and Initialize
 ```js
 var objectName = {
-	key : value,
-	key : value,
-	array : [ value, value, value ]
-	methodName : function() {
-		//method code
-	},
-	methodName : function(parameter) {
-		//method code
-	}
+    key : value,
+    key : value,
+    array : [ value, value, value ]
+    methodName : function() {
+    	//method code
+    },
+    methodName : function(parameter) {
+    	//method code
+    }
 };
 ```
 
-## Constructor Notation
+## Object Constructor Notation
+#### Declaration then Initialization
 ```js
 var objectName = new Object();
+
 objectName.property = value;
 objectName.methodName = function() {
     //method code
 }
+```
+
+#### Declare and Initialize
+* Allows the creation of multiple objects based off of a class.
+```js
+function Class(con1, con2, con3) {
+    //properties
+    this.con1 = con1;
+    this.con2 = con2;
+    this.con3 = con3;
+
+    //methods
+    this.method = function(par1) {
+        return par1;
+    }
+}
+
+var object = new Class('par1', 42, true);
 ```
 
 ## Classes
