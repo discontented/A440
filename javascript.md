@@ -87,6 +87,7 @@ objectName.methodName = function() {
 
 #### Declare and Initialize
 * Allows the creation of multiple objects based off of a class.
+
 ```js
 function Class(con1, con2, con3) {
     //properties
@@ -104,6 +105,7 @@ var object = new Class('par1', 42, true);
 ```
 
 ## Classes
+
 * `this` keyword is used instead of object name to indicate this object that is being created.
 * Best practice is to begin a constructor function with a capital letter.
 
