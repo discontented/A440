@@ -140,7 +140,7 @@ objectName.method()
 
 * Square Brackets
 ```js
-objectName[‘method’]();
+objectName['method']();
 ```
 
 # Arrays
