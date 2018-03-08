@@ -11,13 +11,17 @@
 * Technically Javascript does not have classes but you can create something like them with [constructor functions](#classes)
 
 # Loading Javascript
-* Javascript can be inserted directly in the HTML with a `<script>` tag
-
-```js
+* Javascript can be embedded within the HTML with a `<script>` tag
+```html
 <script>
-    <!--js code-->
+    // jscode
 </script>
 ```
+* Or it can be loaded from a separate file
+```html
+<script src="script.js"></script>
+```
+
 
 # Variables
 ## Local Scope
