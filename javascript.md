@@ -50,6 +50,7 @@ function functionName(var1,var2,...,varX)
 
 #### Declaration then Initialization
 * The object has been created but no properties or methods assigned.
+
 ```js
 var objectName = {};
 
@@ -60,6 +61,7 @@ objectName.methodName = function(par1) {
 ```
 
 #### Declare and Initialize
+
 ```js
 var objectName = {
     key : value,
