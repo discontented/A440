@@ -29,5 +29,19 @@ $(selector).action();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
 
+# AJAX
+
+```js
+$.ajax({
+  url: 'receive.php',
+  type: 'POST',
+  data: {variable : value},
+  success: function()
+  {
+    //javascript code to execute
+  }
+})  
+```
+
 ## Resources
 [w3 Schools](https://www.w3schools.com/jquery/jquery_syntax.asp)
