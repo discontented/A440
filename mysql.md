@@ -118,13 +118,17 @@ ON table2.columnKey = table3.columnKey
 ## Creating a Table
 ```mysql
 CREATE TABLE table_name (
-    name_id int NOT NULL identity(1,1), 
+    name_id int NOT NULL AUTO_INCREMENT, 
     foreign_id int NOT NULL,
     table_date datetime, 
     CONSTRAINT constraint_name PRIMARY KEY (name_id)
     CONSTRAINT constraint_name FOREIGN KEY(foreign_id) REFERENCES fkTable (foreign_id)
 );
 ```
+
+* `identity(<seed>,<increment>)`
+    * The default or starting value.
+    * How much the seed is incremented by when a new row is added.
 
 ## UPDATE
 ```mysql
