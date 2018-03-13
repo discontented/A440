@@ -2,7 +2,7 @@ function account(name, password) {
     this.name = name;
     this.password = password;
 
-    this.postLogin = function (targetEl, phpPage) {
+    this.postLogin = function (phpPage) {
         $("form").on("submit", function (event) {
             event.preventDefault();
             console.log($(this).serialize());

@@ -1,66 +1,85 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Project_A440</title>
-        <link rel="stylesheet" href="indexCSS.css"> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
-    <body>
 
-        <nav>
-            <table>
-                <tr>
-                    <td><a href="index.html" title="Home">Home</a></td>
-                    <td><a href="index.html" title="Contact">Contact Us</a></td>
-                </tr>
-            </table>
-        </nav>
+<head>
+    <meta charset="utf-8">
+    <title>Project_A440</title>
+    <link rel="stylesheet" href="indexCSS.css">
+    <link rel="stylesheet" href="addedCSSindex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 
-        <div class="login" id="hostUser">
-            <button onclick="document.getElementById('id01').style.display = 'block'" style="width:auto; padding:100px; border:3px solid #FFF;">Host a Session</button>
-        </div>
+<body>
 
-        <div class="login" id="guestUser">
-            <button onclick="document.getElementById('id01').style.display = 'block'" style="width:auto; padding:100px; border:3px solid #FFF;">Login as Guest</button>
-        </div>
+    <nav>
+        <table>
+            <tr>
+                <td>
+                    <a href="index.html" title="Home">Home</a>
+                </td>
+                <td>
+                    <a href="index.html" title="Contact">Contact Us</a>
+                </td>
+            </tr>
+        </table>
+    </nav>
 
-        <div id="id01" class="modal">
+    <div class="login" id="hostUser">
+        <button class="loginButton" id="hostButton">Host a Session</button>
+    </div>
 
-            <form class="modal-content animate" action="/action_page.php">
-                <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
-                </div>
+    <div class="login" id="guestUser">
+        <button class="loginButton" id="hostButton">Login as Guest</button>
+    </div>
 
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
+    <div id="id01" class="modal">
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="passwd" required>
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+            </div>
 
-                    <button type="submit">Login</button>
-                </div>
+            <div class="container">
+                <label for="uname">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
-        </div>
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="passwd" required>
 
-        <script>
-            // Get the modal
-            var modal = document.getElementById('id01');
+                <button type="submit">Login</button>
+            </div>
 
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+<!-- After removing embedded JS and CSS -->
+
+    <script>
+        $("#hostButton").click(function() {
+            ("#id01").css("display: block");
+        })
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
-        </script>
+        }
+    </script>
 
-        <script src="scripts/login.js"></script>
+    <script src="scripts/login.js"></script>
 
-    </body>
+</body>
 
 </html>
