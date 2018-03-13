@@ -60,26 +60,37 @@
         </form>
     </div>
 
-<!-- After removing embedded JS and CSS -->
+    <!-- Guest Login Modal -->
+    <div id="guestLoginCon" class="modal">
 
-    <script>
-        $("#hostButton").click(function() {
-            $("#hostLoginCon").css("display", "block");
-        })
+        <form id="guestForm" class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span class="close" title="Close Modal">&times;</span>
+            </div>
 
-        $("#guestButton").click(function() {
-            $("#guestLoginCon").css("display: block");
-        })
+            <div class="container">
+                <label for="uname">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-        $(".close").click(function(){
-            $(".modal").css("display", "none");
-        })
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="passwd" required>
 
-        $(".cancelbtn").click(function(){
-            $(".modal").css("display", "none");
-        })
-    </script>
+                <button type="submit">Login</button>
+            </div>
 
+            <div class="container cancelCon" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- After removing embedded JS and CSS -->
+
+    <script src="aestethics.js"></script>
     <script src="scripts/login.js"></script>
 
 </body>

@@ -9,4 +9,3 @@ If user clicks on `#guestUser`, then they would be a guest and should POST to gu
 1. Clicks `#hostUser`
 
 1. Clicks `#guestUser`
-    1. 

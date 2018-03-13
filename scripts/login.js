@@ -13,7 +13,6 @@ function account(name, password) {
 var username = $("#hostUser");
 var user_pw = $("#guestUser");
 
-
 function postForm(targetForm, phpURL) {
     $(targetForm).on("submit", function (event) {
         event.preventDefault();
@@ -27,7 +26,9 @@ function postForm(targetForm, phpURL) {
         })
     });
 }
-
+$("#hostUser").click(function(){
+    
+})
 postForm("form", "php/receivePost.php");
 
 
