@@ -32,11 +32,12 @@
         <button class="loginButton" id="guestButton">Login as Guest</button>
     </div>
 
+    <!-- Host's Login -->
     <div id="hostLoginCon" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php">
+        <form id="hostForm" class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                <span class="close" title="Close Modal">&times;</span>
             </div>
 
             <div class="container">
@@ -53,8 +54,8 @@
                 <button type="submit">Login</button>
             </div>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Cancel</button>
+            <div class="cancelCon" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
             </div>
         </form>
     </div>
@@ -63,11 +64,19 @@
 
     <script>
         $("#hostButton").click(function() {
-            $(".modal").css("display", "block");
+            $("#hostLoginCon").css("display", "block");
         })
 
         $("#guestButton").click(function() {
-            $("#id01").css("display: block");
+            $("#guestLoginCon").css("display: block");
+        })
+
+        $(".close").click(function(){
+            $(".modal").css("display", "none");
+        })
+
+        $(".cancelbtn").click(function(){
+            $(".modal").css("display", "none");
         })
     </script>
 
