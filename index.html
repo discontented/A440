@@ -29,10 +29,10 @@
     </div>
 
     <div class="login" id="guestUser">
-        <button class="loginButton" id="hostButton">Login as Guest</button>
+        <button class="loginButton" id="guestButton">Login as Guest</button>
     </div>
 
-    <div id="id01" class="modal">
+    <div id="hostLoginCon" class="modal">
 
         <form class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
@@ -63,6 +63,10 @@
 
     <script>
         $("#hostButton").click(function() {
+            $("#hostLoginCon").css("display: block");
+        })
+
+        $("#guestButton").click(function() {
             $("#id01").css("display: block");
         })
     </script>
