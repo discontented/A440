@@ -3,7 +3,7 @@ $("#hostButton").click(function() {
 })
 
 $("#guestButton").click(function() {
-    $("#guestLoginCon").css("display: block");
+    $("#guestLoginCon").css("display", "block");
 })
 
 $(".close").click(function(){
