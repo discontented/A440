@@ -2,16 +2,20 @@ function account(name, password) {
     this.name = name;
     this.password = password;
 
-    this.postLogin = function (phpPage) {
-        $("form").on("submit", function (event) {
+    this.postLogin = function (targetForm, phpPage) {
+        $(targetForm).on("submit", function (event) {
             event.preventDefault();
-            console.log($(this).serialize());
+            $.ajax({
+                url: phpURL,
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (data) {
+                    alert(data)
+                }
+            })
         });
     }
 }
-
-var username = $("#hostUser");
-var user_pw = $("#guestUser");
 
 function postForm(targetForm, phpURL) {
     $(targetForm).on("submit", function (event) {
@@ -21,14 +25,13 @@ function postForm(targetForm, phpURL) {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                alert(data)
+                window.location = "main.html"
             }
         })
     });
 }
-$("#hostUser").click(function(){
-    
-})
-postForm("form", "php/receivePost.php");
+
+postForm("#hostForm", "php/receivePOST.php");
+postForm("#guestForm", "php/receivePOST.php");
 
 
