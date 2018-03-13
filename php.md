@@ -1,3 +1,14 @@
+- [Connecting to a Database](#connecting-to-a-database)
+	- [Login Information](#login-information)
+	- [Requirements](#requirements)
+	- [Older Method](#older-method)
+		- [MySQL Functions](#mysql-functions)
+		- [Query](#query)
+	- [PDO Method](#pdo-method)
+		- [Querying the Database](#querying-the-database)
+		- [Updating the Database](#updating-the-database)
+			- [Placeholders](#placeholders)
+
 # Connecting to a Database
 
 * PHP allows multiple methods to connect to a MySQL database.
