@@ -31,7 +31,7 @@ function postForm(targetForm, phpURL) {
     });
 }
 
-postForm("#hostForm", "php/receivePOST.php");
-postForm("#guestForm", "php/receivePOST.php");
+postForm("#hostForm", "php/receivePost.php");
+postForm("#guestForm", "php/receivePost.php");
 
 
