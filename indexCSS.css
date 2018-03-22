@@ -76,7 +76,7 @@ button {
   display: block;
 }
 
-.loginContainer {
+#loginContainer {
   display: flex;
   flex-direction: column;
   height: 100%;
