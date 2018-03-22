@@ -9,26 +9,30 @@ h1 {
   font-variant: small-caps;
 }
 
-nav {
+/* Header */
+#header {
+  display: flex;
+  flex-direction: row;
   background-image: url(images/string3-progressive.jpg);
   background-position: center;
   font-family: Arial, Helvetica, sans-serif;
   font-variant: small-caps;
   border: 3px solid beige;
   font-weight: 700;
-}
-
-table {
   width: 20%;
   padding: 12px;
 }
 
-td a {
+#header div {
+  flex: 1;
+}
+
+#header a {
   color: #fff;
   text-decoration: none;
 }
 
-td a:hover {
+#header a:hover {
   -webkit-transition: background-color 1200ms linear;
   -ms-transition: background-color 1200ms linear;
   transition: background-color 1200ms linear;
@@ -43,6 +47,7 @@ td a:hover {
   border: 3px solid black;
   font-weight: bold;
 }
+/* Header End */
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -83,7 +88,6 @@ button {
 }
 
 /* Index Login */
-
 #loginContainer {
   display: flex;
   flex-direction: column;
