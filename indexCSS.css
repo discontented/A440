@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 
 h1 {
@@ -181,3 +182,220 @@ span.psw {
        width: 100%;
     }
 }
+=======
+@charset "utf-8";
+
+
+h1 {
+	text-align:center;
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-weight:lighter;
+	font-size:32px;
+	font-variant:small-caps;
+}
+
+nav {
+	background-image:url(images/string3.jpg);
+	background-position:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-variant:small-caps;
+	border:3px solid beige;
+	font-weight:700;
+}
+
+
+table {
+	width:20%;
+	padding:12px;
+}
+
+
+td a {
+	color:#FFF;
+	text-decoration:none;
+	
+}
+
+td a:hover {
+		
+    -webkit-transition: background-color 1200ms linear;
+    -ms-transition: background-color 1200ms linear;
+    transition: background-color 1200ms linear;
+	color:#000;
+	background-color:beige;
+	-webkit-transition:color 1200ms linear;
+    -ms-transition:color 1200ms linear;
+    transition:color 1200ms linear;
+	opacity:.5;
+	padding:7px;
+	margin:-10px;
+	border:3px solid black;
+	font-weight:bold;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-image:url(images/woodguitar2.jpg);
+	background-repeat:no-repeat;
+	min-height:100%;
+	background-size:100%;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+}
+
+
+html {
+	min-height:100%;
+}
+
+
+footer {
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	text-align:center;
+	padding:5px;
+	position:absolute;
+	width:97%;
+	bottom:0;
+	text-align:center;
+}
+
+
+button {
+	margin:auto;
+	display:block;
+}
+
+
+.loginContainer {
+	height: 100%;
+    width: 100%;
+}
+
+
+.login {
+	position: relative;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	width:20%;
+	top:100px;
+
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid $000;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	font-weight:bold;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 5px solid #000;
+    width: 50%; 
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+>>>>>>> 700b6f1... Add files via upload
