@@ -52,12 +52,17 @@ td a:hover {
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background-image:url(images/woodguitar2.jpg);
-	background-size:cover;
 	background-repeat:no-repeat;
+	min-height:100%;
+	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
-	-o-background-size: cover;
-	min-height:100%;
+	-o-background-size:cover;
+	background-size:100%;
+	-webkit-background-size:100%;
+	-moz-background-size:100%
+	-o-background-size:100%;
+	
 }
 
 
