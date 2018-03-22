@@ -56,8 +56,16 @@ body {
 	background-repeat:no-repeat;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
-	height:100%;
+	-o-background-size: cover;
+}
 
+
+html { 
+  background: url(images/woodguitar2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 
@@ -208,6 +216,3 @@ span.psw {
     }
 }
 
-html {
-	height:100%;
-}
