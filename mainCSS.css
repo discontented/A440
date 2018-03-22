@@ -22,13 +22,13 @@ td a {
 
 td a:hover {
 	background-color:#FFF;
-    -webkit-transition: background-color 2000ms linear;
-    -ms-transition: background-color 2000ms linear;
-    transition: background-color 2000ms linear;
+    -webkit-transition: background-color 1200ms linear;
+    -ms-transition: background-color 1200ms linear;
+    transition: background-color 1200ms linear;
 	color:#000;
-	-webkit-transition:color 2000ms linear;
-    -ms-transition:color 2000ms linear;
-    transition:color 2000ms linear;
+	-webkit-transition:color 1200ms linear;
+    -ms-transition:color 1200ms linear;
+    transition:color 1200ms linear;
 	
 	
 }
@@ -83,6 +83,52 @@ footer {
 	text-align:center;
 }
 
+.songBox {
+	border:2px solid black;
+	width:100%;
+	display:flex;
+	
+}
+
+.songTitle {
+	width:65%;
+	padding-top:1%;
+	padding-bottom:1%;
+	padding-left:2%;
+	border:2px dashed black;
+	color: #000;
+	float:left;
+	overflow:hidden;
+	
+}
+
+.upVote {
+	padding-top:1%;
+	padding-bottom:1%;
+	padding-left:2%;
+	width:15%;
+	border:2px dashed black;
+	overflow:hidden;
+	float:left;
+	
+}
+
+.voteNum {
+	padding-top:1%;
+	padding-bottom:1%;
+	padding-left:2%;
+	width:20%;
+	border:2px dashed black;
+	overflow:hidden;
+	float:left;
+
+}
+
+
+
+
+
+
 #search{
 	margin:auto;
 	opacity:.8;
@@ -101,10 +147,17 @@ footer {
 	opacity:.7;S
 	margin-top:10px;
 	text-align:center;
+	
 }
+
 	
 #maincontainer {
 	border:5px dashed #FFF;
+	height:100%;
+	padding-bottom:5%;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:5%;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
