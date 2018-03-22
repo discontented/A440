@@ -60,12 +60,8 @@ body {
 }
 
 
-html { 
-  background: url(images/woodguitar2.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html {
+	min-height:100%;
 }
 
 
