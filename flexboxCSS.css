@@ -1,0 +1,18 @@
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    flex: 1;
+    width: 100%;
+}
+
+.login {
+    flex: 1;
+}

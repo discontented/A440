@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project_A440</title>
-    <link rel="stylesheet" href="indexCSS.css">
+    <!-- <link rel="stylesheet" href="indexCSS.css"> -->
+    <link rel="stylesheet" href="flexboxCSS.css">
     <link rel="stylesheet" href="addedCSSIndex.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
 <body>
-
+<div id="container">
     <div id="header"></div>
 
     <div id="loginContainer">
@@ -80,15 +81,18 @@
                 <button type="button" class="cancelbtn">Cancel</button>
             </div>
         </form>
-    </div>
-
+    </div> <!-- End of Login Modal -->
+    
     <div id="footer"></div>
 
-    <!-- After removing embedded JS and CSS -->
-    <script src="scripts/initialize.js"></script>
-    <script src="scripts/aesthetics.js"></script>
-    <script src="scripts/login.js"></script>
+</div> <!-- End of container -->
 
+    
 </body>
+
+<!-- After removing embedded JS and CSS -->
+<script src="scripts/initialize.js"></script>
+<script src="scripts/aesthetics.js"></script>
+<script src="scripts/login.js"></script>
 
 </html>
