@@ -8,6 +8,11 @@
 		- [Querying the Database](#querying-the-database)
 		- [Updating the Database](#updating-the-database)
 			- [Placeholders](#placeholders)
+	- [Debugging](#debugging)
+		- [Create PHP Config Page](#create-php-config-page)
+		- [Modify PHP Config](#modify-php-config)
+		- [`.htaccess` file](#htaccess-file)
+			- [`htaccess` settings](#htaccess-settings)
 
 # Connecting to a Database
 
@@ -131,3 +136,47 @@ try {//Creates object with query results
 	exit;
 }
 ```
+
+## Debugging
+
+* PHP defaults to not display errors.
+* There are multiple ways to turn error handling on:
+	* [Modify the configuration file](#Modify-PHP-Config)
+		* This will turn error handling on server-wide.
+	* [Turn on at the web root](#htaccess-file)
+
+### Create PHP Config Page
+
+1. On the server, create a `phpinfo.php` page in the web environment folder (usually `/var/www/`)
+	2. `phpinfo.php` contents:
+
+		```php
+		<?php
+			phpinfo();
+		?>
+		```
+
+### Modify PHP Config
+
+1. Locate `php.ini`
+	2. The `php.ini` file path will be displayed on [`phpinfo.php`](#Create-PHP-Config-Page) under "Configuratin File Path".
+
+2. Locate log file directory under `APACHE_LOG_DIR` on `phpinfo.php`
+	1. To specify your own location for error log files, add the following line to `php.ini`
+		```
+		error_log=/path/log_file
+		```
+	2. If these log files are placed in the web environment directory, it can be accessed through a browser. 
+	3. If wanting to see only the most recent errors run `tail error.log` in the terminal.
+
+### `.htaccess` file
+
+1. If you cannot modify the `php.ini` file, you can setup error handling at the directory level.
+
+#### `htaccess` settings
+	```
+	php_flag display_startup_errors on
+	php_flag display_errors on
+	php_value error_reporting -1
+	php_flag html_errors on
+	```
