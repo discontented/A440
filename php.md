@@ -13,6 +13,7 @@
 		- [Modify PHP Config](#modify-php-config)
 		- [`.htaccess` file](#htaccess-file)
 			- [`htaccess` settings](#htaccess-settings)
+		- [PHP Header](#php-header)
 
 # Connecting to a Database
 
@@ -144,6 +145,7 @@ try {//Creates object with query results
 	* [Modify the configuration file](#Modify-PHP-Config)
 		* This will turn error handling on server-wide.
 	* [Turn on at the web root](#htaccess-file)
+	* Set error handling for a specific PHP file
 
 ### Create PHP Config Page
 
@@ -180,3 +182,11 @@ try {//Creates object with query results
 	php_value error_reporting -1
 	php_flag html_errors on
 	```
+
+### PHP Header
+
+```php
+<?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+>
