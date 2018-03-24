@@ -161,7 +161,7 @@ try {//Creates object with query results
 ### Modify PHP Config
 
 1. Locate `php.ini`
-	2. The `php.ini` file path will be displayed on [`phpinfo.php`](#Create-PHP-Config-Page) under "Configuratin File Path".
+	2. The `php.ini` file path will be displayed on [`phpinfo.php`](#Create-PHP-Config-Page) under "Configuration File Path".
 
 2. Locate log file directory under `APACHE_LOG_DIR` on `phpinfo.php`
 	1. To specify your own location for error log files, add the following line to `php.ini`
