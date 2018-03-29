@@ -38,8 +38,6 @@ body {
     background-repeat:no-repeat;
     -webkit-background-size:cover;
     -moz-background-size:cover;
-
-
 }
 
 footer {
@@ -116,10 +114,12 @@ footer {
     border:2px dashed black;
     overflow:hidden;
     float:left;
-
 }
 
 #search{
+    display: flex;
+    flex-direction: column;
+    flex: 1;    
     margin:auto;
     opacity:.8;
     margin-top:10px;
@@ -140,8 +140,9 @@ footer {
 
 }
 
-
 #maincontainer {
+    display: flex;
+    flex-direction: column;
     border:5px dashed #FFF;
     height:100%;
     padding-bottom:5%;
@@ -171,4 +172,19 @@ input:focus {
 
 select {
     border:3px solid #000;
+}
+
+#searchResults {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color:#FFF;
+    margin:auto;
+    opacity:.7;
+    text-align:center;
+}
+
+.result {
+    flex: 1;
+    border 1px solid #000;
 }
