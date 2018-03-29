@@ -12,6 +12,7 @@
         - [Union](#union)
         - [Intersect](#intersect)
     - [Creating a Table](#creating-a-table)
+        - [Without Constraints](#without-constraints)
     - [UPDATE](#update)
     - [INSERT](#insert)
         - [Positional Insert](#positional-insert)
@@ -25,6 +26,9 @@
         - [IN](#in)
     - [GROUP BY](#group-by)
         - [Aggregate Functions](#aggregate-functions)
+    - [Constraints](#constraints)
+        - [Two Primary Keys](#two-primary-keys)
+        - [Composite Key](#composite-key)
 
 <!-- /TOC -->
 
@@ -123,6 +127,18 @@ CREATE TABLE table_name (
     table_date datetime, 
     CONSTRAINT constraint_name PRIMARY KEY (name_id)
     CONSTRAINT constraint_name FOREIGN KEY(foreign_id) REFERENCES fkTable (foreign_id)
+);
+```
+### Without Constraints
+* To create a table with both primary keys as foreign keys.
+```mysql
+CREATE TABLE table_name
+(
+  pfk_ID_1 int(11) NOT NULL,
+  pfk_ID_2 int(11) NOT NULL,
+  PRIMARY KEY (pfk_ID_1, pfk_ID_2),
+  FOREIGN KEY(pfk_ID_1) REFERENCES fkTable_1(id),
+  FOREIGN KEY(pfk_ID_2) REFERENCES fkTable_2(id)
 );
 ```
 
@@ -242,3 +258,13 @@ JOIN table_fk
 ON table_fk.id = table.fk_id
 GROUP BY column;
 ```
+
+## Constraints
+### Two Primary Keys
+```mysql
+CONSTRAINT pk_name PRIMARY KEY (pk_1, pk_2)
+```
+
+### Composite Key
+* A composite key is a unique pair of values in a row between two columns.
+    * No other row can exist with this permutation (order matters) of two column values.
