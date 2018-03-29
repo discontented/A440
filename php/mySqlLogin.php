@@ -1,8 +1,9 @@
 <?php
 
-$db_hostname = 'localhost';
-$db_database = '';
-$db_username = 'www';
-$db_password = 'guest';
+$dbServername = 'localhost';
+$dbName = '';
+$dbUsername = 'www';
+$dbPassword = 'guest';
 
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 ?>

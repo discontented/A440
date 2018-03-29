@@ -1,4 +1,5 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -8,6 +9,7 @@
         <link rel="stylesheet" href="indexCSS.css">
         <link rel="stylesheet" href="addedCSSIndex.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        $conn; 
     </head>
 
     <body>
@@ -26,7 +28,7 @@
             <!-- Host's Login -->
             <div id="hostLoginCon" class="modal">
 
-                <form id="hostForm" class="modal-content animate" action="/action_page.php">
+                <form id="hostForm" class="modal-content animate"  action="php/signup.php" method="POST">
                     <div class="imgcontainer">
                         <span class="close" title="Close Modal">&times;</span>
                     </div>
@@ -82,6 +84,7 @@
             <div id="footer"></div>
 
         </div> <!-- End of container -->
+
 
 
     </body>
