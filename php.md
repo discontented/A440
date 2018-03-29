@@ -14,6 +14,7 @@
 		- [`.htaccess` file](#htaccess-file)
 			- [`htaccess` settings](#htaccess-settings)
 		- [PHP Header](#php-header)
+	- [Resources](#resources)
 
 # Connecting to a Database
 
@@ -191,3 +192,7 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 >
 ```
+
+## Resources
+[Stack Overflow](https://stackoverflow.com/questions/845021/how-to-get-useful-error-messages-in-php)
+[treehouse](http://blog.teamtreehouse.com/how-to-debug-in-php)
