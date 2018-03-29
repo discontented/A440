@@ -14,6 +14,11 @@
 		- [`.htaccess` file](#htaccess-file)
 			- [`htaccess` settings](#htaccess-settings)
 		- [PHP Header](#php-header)
+	- [Sessions](#sessions)
+		- [Starting a session](#starting-a-session)
+		- [Set a Session Variable](#set-a-session-variable)
+		- [Get Session Variable](#get-session-variable)
+		- [End Session](#end-session)
 	- [Resources](#resources)
 
 # Connecting to a Database
@@ -193,6 +198,38 @@ error_reporting(E_ALL);
 >
 ```
 
+## Sessions
+* Session variables hold info about a single user.
+* They are available to all pages in one app.
+* These session variables last until the user closes the browser.
+
+### Starting a session
+* Start a session with `session_start()`
+* Place at the top of first page of the app.
+```php
+<?php
+	session_start();
+?>
+```
+
+### Set a Session Variable
+* `$_SESSION` is the global session variable.
+
+```php
+$_SESSION['varName'] = "value";
+```
+
+### Get Session Variable
+* Calling the global session variable with the variable name as the index will return the value.
+```php
+echo $_SESSION['varName'];
+```
+
+### End Session
+* `session_unset()` removes all session variables
+* `session_destroy()` destroys the session
+
 ## Resources
 [Stack Overflow](https://stackoverflow.com/questions/845021/how-to-get-useful-error-messages-in-php)
 [treehouse](http://blog.teamtreehouse.com/how-to-debug-in-php)
+[Sessions](https://www.w3schools.com/php/php_sessions.asp)
