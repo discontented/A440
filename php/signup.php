@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST[''])){
+if (isset($_POST['submit'])){
     include_once 'mySqlLogin.php';
     $userName = $_POST['username'];
     $password = $_POST['passwd'];
