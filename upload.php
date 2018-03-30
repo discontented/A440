@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['save_audio']) && $_POST['save_audio']=="upload_audio")
+if(isset($_POST['save_audio']) && $_POST['save_audio']=="Upload Audio")
 {
     $dir='uploads/';
     $audio_path=$dir.basename($_FILES['audiofile']['name']);
