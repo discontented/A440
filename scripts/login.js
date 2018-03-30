@@ -25,8 +25,10 @@ function postForm(targetForm, phpURL) {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                console.log(data);
                 window.location = "main.html";
+            },
+            error: function (data) {
+                console.log(data.responseText);
             }
         })
     });
