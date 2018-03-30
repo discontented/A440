@@ -20,7 +20,7 @@ function displayAudios()
     {
         die('server not connected');
     }
-    $query="select * from song";
+    $query="select * from Song";
     $r=mysqli_query($conn,$query);
     while($row=mysqli_fetch_array($r))
     {
@@ -36,8 +36,8 @@ function saveAudio($mp3_file)
     {
         die('server not connected');
     }
-    $query="use table song";
-    $query="insert into song(mp3_file)values('{$mp3_file}')";
+    $query="use table Song";
+    $query="insert into Song(mp3_file)values('{$mp3_file}')";
     mysqli_query($conn,$query);
     if(mysqli_affected_rows($conn)>0)
     {
