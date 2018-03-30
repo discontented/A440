@@ -31,7 +31,7 @@ function displayAudios()
 }
 function saveAudio($mp3_file)
 {
-    $conn=mysqli_connect('localhost','root','harmony','A440');
+    $conn=mysqli_connect('127.0.0.1','root','harmony','A440');
     if(!$conn)
     {
         die('server not connected');
