@@ -45,7 +45,6 @@ $(selector).action();
 
 * jQuery provides methods to handle Ajax requrests.
 * Typical ajax code:
-* 
 ```js
 $.ajax({
   url: 'phpURL.php',
@@ -56,6 +55,8 @@ $.ajax({
   }
 })
 ```
+* `success` executes if the request succeeds.
+  * This means that there were no issues in reaching the PHP page, regardless of errors.
 
 ## Shortcuts for `.ajax()`
 
