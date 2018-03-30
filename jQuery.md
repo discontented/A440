@@ -44,6 +44,18 @@ $(selector).action();
 # AJAX
 
 * jQuery provides methods to handle Ajax requrests.
+* Typical ajax code:
+* 
+```js
+$.ajax({
+  url: 'phpURL.php',
+  type: 'POST' or 'GET',
+  data: { var : value },
+  success: function (response) {
+    //code using response data
+  }
+})
+```
 
 ## Shortcuts for `.ajax()`
 
