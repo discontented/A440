@@ -25,14 +25,17 @@ function postForm(targetForm, phpURL) {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                console.log(data);
                 window.location = "main.html";
+            },
+            error: function (data) {
+                console.log(data.responseText);
             }
         })
     });
 }
 
-postForm("#hostForm", "php/receivePost.php");
+//postForm("#hostForm", "php/receivePost.php");
+postForm("#hostForm", "php/signup.php");
 postForm("#guestForm", "php/receivePost.php");
 
 
