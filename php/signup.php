@@ -1,5 +1,6 @@
 <?php
 
+echo($user);
 if (isset($_POST['submit'])){
     include_once 'mySqlLogin.php';
     $userName = $_POST['username'];
@@ -9,6 +10,6 @@ if (isset($_POST['submit'])){
     mysqli_query($conn, $sql); 
 
 } else {
-    header("Location: ../index.php?signup=success");
+    header("Location: ../main.html?signup=success");
     exit();
 }
