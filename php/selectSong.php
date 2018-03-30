@@ -7,7 +7,7 @@ require "dbConnect.php";
 $selection = $_POST['selection'];
 
 try {
-    $statement = $db->prepare("INSERT INTO Playlist(Song_ID, track_name, artist FROM Song WHERE artist LIKE :artist");
+    $statement = $db->prepare("INSERT INTO Playlist(Song_ID, track_name, artist) FROM Song WHERE artist LIKE :artist");
     $results->execute(array(":artist" => '%'.$artist.'%'));
 } catch (Exception $e) {
 	echo $e->getMessage();
