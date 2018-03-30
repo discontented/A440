@@ -6,7 +6,6 @@ if(isset($_POST['save_audio']) && $_POST['save_audio']=="upload_audio")
     if(move_uploaded_file($_FILES['audiofile']['tmp_name'],$audio_path))
        {
            echo "uploaded successfully";
-           saveAudio($audio_path);
        }
      else 
      {
