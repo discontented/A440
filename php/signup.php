@@ -5,8 +5,8 @@ if (isset($_POST[''])){
     $userName = $_POST['username'];
     $password = $_POST['passwd'];
 
-    $sql = "INSERT INTO participant (username, host) VALUES ('$userName', '$password');";
-    //$result = mysqli_query($conn, $sql); 
+    $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$password');";
+    mysqli_query($conn, $sql); 
 
 } else {
     header("Location: ../index.php?signup=success");
