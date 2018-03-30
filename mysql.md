@@ -171,8 +171,7 @@ WHERE columnID IN
 INSERT INTO table
     (name_field, year_field, currency_field)
 VALUES
-    (‘name_val’, ‘year_val’, currency_val’)
-VALUES
+    (‘name_val’, ‘year_val’, currency_val’),
     (‘name_val2’, ‘year_val2’, currency_val2’);
 ```
 
