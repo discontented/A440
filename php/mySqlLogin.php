@@ -1,9 +1,9 @@
 <?php
 
-$dbServername = 'localhost';
-$dbName = 'A440';
-$dbUsername = 'root';
-$dbPassword = 'harmony';
+$db_hostname = 'localhost';
+$db_database = 'A440';
+$db_username = 'root';
+$db_password = 'harmony';
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $db_database);
 ?>

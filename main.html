@@ -7,7 +7,6 @@
   <title>Project_A440</title>
   <link rel="stylesheet" href="mainCSS.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="scripts/initialize.js"></script>
 </head>
 
 <body>
@@ -19,16 +18,19 @@
   <div id="maincontainer">
 
     <div id="player">
-        <audio controls autoplay>
-            
-        </audio>
+      <audio controls autoplay>
+
+      </audio>
     </div>
 
     <div id="search">
       <form action="" method="">
         <input type="text" placeholder="Search.." name="search" id="searchBox" style="opacity:.8; text-align:center;">
-        <input type="submit" value="Submit" ;>
+        <button id="searchTrack">Search Tracks</button>
+        <button id="searchArtist">Search Artists</button>
       </form>
+
+      <div id="searchResults"></div>
     </div>
 
     <div id="playlist">
@@ -55,9 +57,10 @@
 
     </div>
     <!--closes playlist-->
-
+<script src="scripts/initialize.js"></script>
+<script src="scripts/search.js"></script>
+<script src="scripts/select.js"></script>
+    
 </body>
-
-<script src="initialize.js"></script>
 
 </html>
