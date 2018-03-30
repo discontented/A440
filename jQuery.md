@@ -46,6 +46,7 @@ $(selector).action();
 * jQuery provides methods to handle Ajax requrests.
 
 ## Shortcuts for `.ajax()`
+
 code | desc
 --- | ---
 `.load()` | Loads HTML fragments into an element.
