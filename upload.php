@@ -20,23 +20,23 @@ function displayAudios()
     {
         die('server not connected');
     }
-    $query="select * from audios";
+    $query="select * from song";
     $r=mysqli_query($conn,$query);
     while($row=mysqli_fetch_array($r))
     {
-        echo $row['filename'];
+        echo $row['mp3_file'];
         echo "<br/>";
     }
     mysqli_close($conn);
 }
-function saveAudio($filename)
+function saveAudio($mp3_file)
 {
     $conn=mysqli_connect('localhost','root','harmony','A440');
     if(!$conn)
     {
         die('server not connected');
     }
-    $query="use table audios";
+    $query="use table song";
     $query="insert into song(mp3_file)values('{$mp3_file}')";
     mysqli_query($conn,$query);
     if(mysqli_affected_rows($conn)>0)
