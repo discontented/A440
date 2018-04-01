@@ -7,7 +7,8 @@
 	- [PDO Method](#pdo-method)
 		- [Querying the Database](#querying-the-database)
 		- [Updating the Database](#updating-the-database)
-			- [Placeholders](#placeholders)
+		- [Placeholders](#placeholders)
+			- [`bindParam()](#bindparam)
 	- [Debugging](#debugging)
 		- [Create PHP Config Page](#create-php-config-page)
 		- [Modify PHP Config](#modify-php-config)
@@ -124,7 +125,7 @@ $results->execute(':placeholder' => $phpVariable);
 * `$db->prepare()` returns an object.
 	* It is best to store this object in a variable. `$results = $db->prepare()`
 
-#### Placeholders
+### Placeholders
 
 * Placeholder text is prepended by a colon (:) within the SQL statement.
 	* `:placeHolder`
@@ -143,6 +144,13 @@ try {//Creates object with query results
 	exit;
 }
 ```
+
+#### `bindParam()
+```php
+$statement->bindParam(':parameter', $variable, PDO::PARAM_TYPE);
+```
+* Besides an array within `execute()`, parameters can be bound with the `bindParam()` method.
+	* The `bindParam()` method will allow you to specify the type of variable passed with the `PDO::PARAM_TYPE` argument.
 
 ## Debugging
 
