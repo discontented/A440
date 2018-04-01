@@ -8,7 +8,9 @@
 		- [Querying the Database](#querying-the-database)
 		- [Updating the Database](#updating-the-database)
 		- [Placeholders](#placeholders)
-			- [`bindParam()](#bindparam)
+			- [A Single Placeholder](#a-single-placeholder)
+			- [Multiple Placeholders](#multiple-placeholders)
+			- [Placeholders and Wildcard Characters (%)](#placeholders-and-wildcard-characters)
 	- [Debugging](#debugging)
 		- [Create PHP Config Page](#create-php-config-page)
 		- [Modify PHP Config](#modify-php-config)
@@ -145,12 +147,36 @@ try {//Creates object with query results
 }
 ```
 
-#### `bindParam()
+#### A Single Placeholder
 ```php
 $statement->bindParam(':parameter', $variable, PDO::PARAM_TYPE);
 ```
 * Besides an array within `execute()`, parameters can be bound with the `bindParam()` method.
 	* The `bindParam()` method will allow you to specify the type of variable passed with the `PDO::PARAM_TYPE` argument.
+* `PDO::PARAM_TYPE`
+	* `PDO::PARAM_INT`
+	* `PDO::PARAM_STR`
+
+#### Multiple Placeholders
+* You can use bindParam multiple times on the database object to bind different parameters.
+```php
+$statement->bindParam(':parameter1', $variable1, PDO::PARAM_TYPE);
+$statement->bindParam(':parameter2', $variable2, PDO::PARAM_TYPE);
+```
+
+#### Placeholders and Wildcard Characters (%)
+* When using `LIKE` and wildcard characters, they cannot be included within the SQL statement itself, but within the placeholder.
+* This will not work:
+* 
+```php
+"SELECT * FROM `users` WHERE `firstname` LIKE '%:keyword%'";
+```
+* This will work:
+```php
+"SELECT * FROM `users` WHERE `firstname` LIKE :keyword";
+$keyword = "%".$keyword."%";
+```
+
 
 ## Debugging
 
