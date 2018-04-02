@@ -129,7 +129,7 @@ footer {
 
 .result {
     flex: 1;
-    border 1px solid #000;
+    border: 1px solid #000;
 }
 
 /* End of Search */

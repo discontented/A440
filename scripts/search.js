@@ -1,6 +1,4 @@
-
 $(function () {
-
     $("#search").on('click', '#searchArtist', function (e) {
         e.preventDefault();
         $("#searchResults").empty();
@@ -14,7 +12,7 @@ $(function () {
                     var result = eval(response);
 
                     for (var index in result) {
-                        $('#searchResults').append("<div class='result' data-song_id=" + result[index]["Song_ID"] + "><div class='trackName'>" + result[index]['track_name'] + "</div></div>");
+                        $('#searchResults').append(searchResult(result[index]["Song_ID"], result[index]['track_name']));
                     }
                 }
             });
@@ -34,7 +32,7 @@ $(function () {
                     var result = eval(response);
 
                     for (var index in result) {
-                        $('#searchResults').append("<div class='result' data-song_id=" + result[index]["Song_ID"] + "><div class='trackName'>" + result[index]['track_name'] + "</div></div>");
+                        $('#searchResults').append(searchResult(result[index]["Song_ID"], result[index]['track_name']));
                     }
                 }
             });

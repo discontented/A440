@@ -2,8 +2,7 @@
 
 $db_hostname = 'localhost';
 $db_database = 'A440';
-$db_username = 'root';
-$db_password = 'harmony';
+$db_username = 'www';
+$db_password = 'guest';
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $db_database);
 ?>
