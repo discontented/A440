@@ -24,6 +24,8 @@
     - [WHERE](#where)
         - [LIKE](#like)
         - [IN](#in)
+        - [AND](#and)
+        - [OR](#or)
     - [GROUP BY](#group-by)
         - [Aggregate Functions](#aggregate-functions)
     - [Constraints](#constraints)
@@ -228,6 +230,20 @@ WHERE column in (‘string’, ‘string’)
 * Show all fields where column is equal to null
 ```mysql
 WHERE column is null
+```
+
+### AND
+```mysql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 ...;
+```
+
+### OR
+```mysql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...;
 ```
 
 ## GROUP BY
