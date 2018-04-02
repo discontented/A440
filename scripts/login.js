@@ -35,7 +35,7 @@ function postForm(targetForm, phpURL) {
 }
 
 //postForm("#hostForm", "php/receivePost.php");
-postForm("#hostForm", "php/signup.php");
+postForm("#hostForm", "php/hostLogin.php");
 postForm("#guestForm", "php/receivePost.php");
 
 
