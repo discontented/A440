@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'mySqlLogin.php';
+    include_once 'php/mySqlLogin.php';
     $userName = $_POST['username'];
     $true = true; 
     //$sql = "SELECT * FROM Participant WHERE username='$userName'";
@@ -14,5 +14,6 @@
         mysqli_query($conn, $sql); 
         echo($user);
     //}
+    ?>
     
    
