@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'php/mySqlLogin.php';
+    include_once 'mySqlLogin.php';
     $userName = $_POST['username'];
     $true = true; 
     //$sql = "SELECT * FROM Participant WHERE username='$userName'";
@@ -11,8 +11,9 @@
     //    exit;
     //} else {
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
-        mysqli_query($conn, $sql); 
+        $result = mysqli_query($conn, $sql); 
         echo($user);
+        header("Location: main.html");
     //}
     ?>
     
