@@ -12,7 +12,7 @@
     //} else {
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
         mysqli_query($conn, $sql); 
-       // echo($user);
+        echo($user);
     //}
     
    
