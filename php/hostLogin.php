@@ -7,7 +7,7 @@
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) > 0 ){
         //throws ERROR, User already logged in
-        header("Location: ../hostLogin.php?signup=usertaken");
+        header("Location: /index.html?signup=usertaken");
         exit;
     } else {
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
