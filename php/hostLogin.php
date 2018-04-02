@@ -1,8 +1,8 @@
 <?php
-
-    include_once 'mySqlLogin.php';
-    $userName = $_POST['username'];
-    $true = true; 
+      header("Location: main.html");
+    //include_once 'mySqlLogin.php';
+    //$userName = $_POST['username'];
+    //$true = true; 
     //$sql = "SELECT * FROM Participant WHERE username='$userName'";
     //$result = mysqli_query($conn, $sql);
     //if(mysqli_num_rows($result) > 0 ){
@@ -10,10 +10,10 @@
         //header("Location: /index.html?signup=usertaken");
     //    exit;
     //} else {
-        $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
-        $result = mysqli_query($conn, $sql); 
-        echo($user);
-        header("Location: main.html");
+       // $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
+        //$result = mysqli_query($conn, $sql); 
+        //echo($user);
+      
     //}
     ?>
     
