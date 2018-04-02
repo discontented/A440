@@ -10,8 +10,8 @@
         //header("Location: /index.html?signup=usertaken");
     //    exit;
     //} else {
-        $sql1 = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
-        mysqli_query($conn, $sql1); 
+        $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
+        mysqli_query($conn, $sql); 
        // echo($user);
     //}
     
