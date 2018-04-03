@@ -68,5 +68,3 @@ class Song {
         return $st->fetchAll(PDO::FETCH_ASSOC);
         }
     }
-
-}
