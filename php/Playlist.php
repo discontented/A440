@@ -8,7 +8,7 @@ class Playlist {
     
     function __construct($db, $sessionID) {
         $this->db = $db;
-        $this->sessionID = $sessionID;
+        $this->sessionID = $_SESSION['Session_ID'];
     }
     
     public function getSongs() {
