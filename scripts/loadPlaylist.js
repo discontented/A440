@@ -2,7 +2,6 @@ function loadPlaylist(phpURL) {
     $.ajax({
         method: "POST",
         url: phpURL,
-        data: {session_id: session_id},
         success: function (response) {
             console.log(response);
             var results = eval(response);
