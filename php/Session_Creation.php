@@ -11,7 +11,7 @@
     $row = mysqli_fetch_assoc($result);
 
     if($row['UserID']!=NULL){
-        $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('test', '$true');";
+        $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$row['UserID']', '$true');";
         mysqli_query($conn, $sql_Participant); 
     }
     //$sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
