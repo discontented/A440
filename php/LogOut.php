@@ -8,5 +8,7 @@ $result = mysqli_query($conn, $sql);
 $sql = "DELETE FROM Participant WHERE UserID = '$GuestID'";
 $result = mysqli_query($conn, $sql);
 
+$sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$tnotnt', '$true');";
+    mysqli_query($conn, $sql_Participant); 
 session_destroy();
 ?>
