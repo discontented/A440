@@ -1,7 +1,14 @@
 <?php
 
-    include 'mySqlLogin.php';
-    $userName = $_POST['username'];
+    $userName = "$_POST['username']" + "gg";
+    $true = true; 
+
+    $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
+    mysqli_query($conn, $sql_Participant); 
+
+
+
+
     $sql_select_id = "SELECT * FROM Room WHERE SessionID=(SELECT MAX(SessionID) FROM Room);";
     $result_id = mysqli_query($conn, $sql_select_id);
     $row_id = mysqli_fetch_assoc($result_id);
