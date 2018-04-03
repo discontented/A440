@@ -13,3 +13,9 @@ function searchResult(songID, trackName) {
         <div class='trackName'>${trackName}</div>
     </div>`;
 }
+
+function audioSource(songURL) {
+    return `
+    <source src=${songURL} type="audio/mp3">
+    `
+}

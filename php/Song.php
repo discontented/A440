@@ -52,4 +52,21 @@ class Song {
         return $st->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getURL() {
+        try {
+            $query = "
+                SELECT mp3_file FROM Song WHERE Song_ID = :songID
+            ";
+            $st = $this->db->prepare($query);
+            $st->bindParam(":songID", $this->songID, PDO::PARAM_INT);
+            $st->execute();
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            exit;
+        }
+        
+        return $st->fetchAll(PDO::FETCH_ASSOC);
+        }
+    }
+
 }

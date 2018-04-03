@@ -26,7 +26,14 @@ function Session() {
         });
     };
 }
+<<<<<<< HEAD
 $(function() {
     var session1 = new Session();
     session1.getSessionID('php/getSession.php');
+=======
+
+$(function() {
+    var thisSession = new Session();
+    thisSession.getSessionID('php/getSession.php');
+>>>>>>> 1faf6bfdfc1741f39648449b95a43584d577a8fa
 })
