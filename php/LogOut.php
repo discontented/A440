@@ -1,7 +1,11 @@
 <?php
 
 session_start();
-session_destroy();
-$sql = "DELETE FROM Participant WHERE username='$userName'";
+
+$sql = "DELETE FROM Participant WHERE UserID = '$_SESSION['SessionID']'";
 $result = mysqli_query($conn, $sql);
+$sql = "DELETE FROM Session_Guest WHERE UserID = '$_SESSION['SessionID']'";
+
+$result = mysqli_query($conn, $sql);
+session_destroy();
 ?>
