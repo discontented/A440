@@ -18,7 +18,7 @@
     $result = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($result);
 
-    $sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
+    $sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('52'  ,'21');";
     mysqli_query($conn, $sql_Connector); 
 
 
