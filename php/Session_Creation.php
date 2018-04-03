@@ -1,6 +1,6 @@
 <?php
 
-    $userName = "$_POST['username']" + "gg";
+    $userName = $_POST['username'];
     $true = true; 
 
     $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
