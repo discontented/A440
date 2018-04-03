@@ -1,5 +1,6 @@
 <?php
 
+include_once 'hostLogin.php';
     $userName = $_POST['username'];
     $true = true; 
 
