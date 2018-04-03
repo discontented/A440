@@ -7,7 +7,7 @@ $("#search").on('click', '.result', function(e) {
     $.ajax({
         method: 'POST',
         url: 'php/selectSong.php',
-        data: { selection: $(this).data('song_id') },
+        data: { selection: $(this).data('Song_ID') },
         success: function(response) {
             loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
         },
