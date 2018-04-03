@@ -3,12 +3,12 @@
     include_once 'mySqlLogin.php';
     $userName = $_POST['username'];
     $true = true; 
-    $sql_select = "SELECT * FROM Participant";
+    $sql_select = "SELECT * FROM Participant Where username='$userName'";
     $result = mysqli_query($conn, $sql_select);
     //echo($result);
     if(mysqli_num_rows($result) > 0 ){
         //throws ERROR, User already logged in
-        header("Location: /index.html?signup=usertaken");
+        $_POST['username']= "User already logged in";
         exit;
     } else {
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
