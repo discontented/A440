@@ -46,14 +46,32 @@
             <!--closes playlist-->
             <script src="scripts/templates.js"></script>
             <script src="scripts/initialize.js"></script>
-            
             <script src="scripts/loadPlaylist.js"></script>
             <script src="scripts/search.js"></script>
             <script src="scripts/upvote.js"></script>
             <script src="scripts/logout.js"></script>
             <script src="scripts/menu.js"></script>
             <script src="scripts/select.js"></script>
-            
+
+            <script>
+              $.ajax({
+    method: "POST",
+    url: 'php/loadPlaylist.php',
+    success: function(response) {
+      console.log(response);
+      var results = eval(response);
+
+      //clears out playlist of any previous entries.
+      $("#playlist").empty();
+
+      for (var index in results) {
+        $("#playlist").append(
+          songBox(results[index]["Song_ID"], results[index]["track_name"], null)
+        );
+      }
+    }
+  });
+            </script>
 
     </body>
 
