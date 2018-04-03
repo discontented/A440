@@ -3,6 +3,7 @@
     $sql_select_id = "SELECT * FROM Room WHERE SessionID=(SELECT MAX(SessionID) FROM Room);";
     $result_id = mysqli_query($conn, $sql_select_id);
     $row_id = mysqli_fetch_assoc($result_id);
+    $SessionID_Get = $row_id['SessionID'];
     $_SESSION['id']= $row_id['SessionID'];
 
 
@@ -10,11 +11,7 @@
     $result = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($result);
     $UserID_Get = $row['UserID'];
-    if($row['UserID']!=NULL){
-        $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$UserID_Get', '$true');";
-        mysqli_query($conn, $sql_Participant); 
-    }
-    //$sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
+    $sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$UserID_Get'  ,'$SessionID_Get');";
     mysqli_query($conn, $sql_Connector); 
 
 
