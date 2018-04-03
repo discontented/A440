@@ -6,7 +6,7 @@ $("#search").on('click', '.result', function(e) {
         url: 'php/selectSong.php',
         data: { selection: $(this).data('song_id') },
         success: function(response) {
-            //testbtn();
+            console.log(response);
             loadPlaylist("php/loadPlaylist.php");
         },
         error: function(error) {
