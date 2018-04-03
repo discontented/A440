@@ -19,8 +19,8 @@
         // echo($user);
          $sql_Room = "INSERT INTO Room (time_stamp) VALUES ('NULL');";
          mysqli_query($conn, $sql_Room); 
-         $sql_Connector = "INSERT INTO Session_Guest (UserID) VALUES ('$row['UserID']');";
-         mysqli_query($conn, $sql_Connector); 
+         //$sql_Connector = "INSERT INTO Session_Guest (UserID) VALUES ('$row['UserID']');";
+        //mysqli_query($conn, $sql_Connector); 
     //}
     
     ?>
