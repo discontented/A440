@@ -46,9 +46,7 @@ function loadSong(phpURL, songURL) {
       }
     }
   });
-  $("#player")
-    .find("audio")
-    .html(audioSource(songUrl));
+  $("#player").find("audio").html(audioSource(songUrl));
 }
 
 loadPlaylist("php/loadPlaylist.php");

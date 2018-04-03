@@ -29,6 +29,7 @@
         <div id="maincontainer">
             <div id="player">
                 <audio controls autoplay>
+                <source src="../music/Never Gonna Give You Up.mp3" type="audio/mp3">
                 </audio>
             </div>
 

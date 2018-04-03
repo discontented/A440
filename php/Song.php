@@ -55,7 +55,9 @@ class Song {
     public function getURL() {
         try {
             $query = "
-                SELECT mp3_file FROM Song WHERE Song_ID = :songID
+                SELECT mp3_file
+                FROM Song 
+                WHERE Song_ID = :songID
             ";
             $st = $this->db->prepare($query);
             $st->bindParam(":songID", $this->songID, PDO::PARAM_INT);
