@@ -9,9 +9,9 @@
     $sql_select = "SELECT * FROM Participant WHERE username='$userName'";
     $result = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($result);
-
+    $UserID_Get = $row['UserID'];
     if($row['UserID']!=NULL){
-        $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$row['UserID']', '$true');";
+        $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$UserID_Get', '$true');";
         mysqli_query($conn, $sql_Participant); 
     }
     //$sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
