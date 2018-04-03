@@ -9,7 +9,7 @@ $("#search").on('click', '.result', function(e) {
         url: 'php/selectSong.php',
         data: { selection: $(this).data('song_id') },
         success: function(response) {
-            testbtn();
+            //testbtn();
             loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
         },
         error: function(error) {
