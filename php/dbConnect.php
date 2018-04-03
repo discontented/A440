@@ -15,4 +15,3 @@ try {//Connects to database and creates object
 }
 
 ?>
-

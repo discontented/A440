@@ -17,8 +17,5 @@ if($_SESSION['host']){
 } else {
 
 }
-
-
-
 session_destroy();
 ?>
