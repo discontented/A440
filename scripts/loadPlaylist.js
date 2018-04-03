@@ -33,20 +33,14 @@ function loadSong(phpURL, songURL) {
   $.ajax({
     method: "POST",
     url: phpURL,
-    data: { session_id: session_id },
     success: function(response) {
       console.log(response);
       var results = eval(response);
       var firstSong = results[0]["Song_ID"];
 
-      for (var index in results) {
-        $("#playlist").append(
-          songBox(results[index]["Song_ID"], results[index]["track_name"], null)
-        );
       }
     }
   });
-  $("#player").find("audio").html(audioSource(songUrl));
 }
 
 loadPlaylist("php/loadPlaylist.php");
