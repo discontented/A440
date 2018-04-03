@@ -17,8 +17,8 @@
         // $result = mysqli_query($conn, $sql_select);
         // $row = mysqli_fetch_assoc($result);
         // echo($user);
-        // $sql_Room = "INSERT INTO Room (time_stamp) VALUES ('NULL');";
-        // mysqli_query($conn, $sql_Room); 
+         $sql_Room = "INSERT INTO Room (time_stamp) VALUES ('NULL');";
+         mysqli_query($conn, $sql_Room); 
         // $sql_Connector = "INSERT INTO Session_Guest (User_ID, Session_ID) VALUES ($row['User_ID']','0'');";
         // mysqli_query($conn, $sql_Connector); 
     //}
