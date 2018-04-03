@@ -1,13 +1,5 @@
 <?php
 
-    //include_once 'hostLogin.php';
-
-    $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
-    mysqli_query($conn, $sql_Participant); 
-
-
-
-
     $sql_select_id = "SELECT * FROM Room WHERE SessionID=(SELECT MAX(SessionID) FROM Room);";
     $result_id = mysqli_query($conn, $sql_select_id);
     $row_id = mysqli_fetch_assoc($result_id);
@@ -18,7 +10,7 @@
     $result = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($result);
 
-   // $sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('52'  ,'21');";
+    $sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
     mysqli_query($conn, $sql_Connector); 
 
 
