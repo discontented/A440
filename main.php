@@ -75,6 +75,7 @@
             <script src="scripts/search.js"></script>
             <script src="scripts/select.js"></script>
             <script src="scripts/upvote.js"></script>
+            <script src="scripts/logout.js"></script>
 
     </body>
 
