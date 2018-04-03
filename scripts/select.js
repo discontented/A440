@@ -10,7 +10,7 @@ $("#search").on('click', '.result', function(e) {
         data: { selection: $(this).data('song_id') },
         success: function(response) {
             //testbtn();
-            loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
+            loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID());
         },
         error: function(error) {
             
