@@ -11,6 +11,6 @@
 
     echo($user);
 // } else {
-//     header("Location: ../main.html?signup=success");
+//     header("Location: ../main.php?signup=success");
 //     exit();
 // }
