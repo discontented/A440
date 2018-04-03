@@ -51,5 +51,4 @@ function loadSong(phpURL, songURL) {
     .html(audioSource(songUrl));
 }
 
-var thisSession = new Session();
 loadPlaylist("php/loadPlaylist.php");
