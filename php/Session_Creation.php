@@ -10,7 +10,11 @@
     $result = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($result);
 
-    $sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
+    if(!$row){
+        $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('test', '$true');";
+        mysqli_query($conn, $sql_Participant); 
+    }
+    //$sql_Connector = "INSERT INTO Session_Guest (UserID, SessionID) VALUES ('$row['UserID']'  ,'21');";
     mysqli_query($conn, $sql_Connector); 
 
 
