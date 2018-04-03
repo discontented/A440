@@ -1,8 +1,7 @@
-function loadPlaylist(phpURL, session_id) {
+function loadPlaylist(phpURL) {
     $.ajax({
         method: "POST",
         url: phpURL,
-        data: {session_id: session_id},
         success: function (response) {
             console.log(response);
             var results = eval(response);
@@ -48,5 +47,5 @@ function loadSong(phpURL, songURL) {
     
 $(function () {
     var thisSession = new Session();
-    loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
+    loadPlaylist("php/loadPlaylist.php");
 });

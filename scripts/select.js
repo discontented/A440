@@ -1,6 +1,3 @@
-var thisSession = new Session();
-thisSession.getSessionID('php/getSession.php');
-
 $("#search").on('click', '.result', function(e) {
     e.preventDefault();
     
@@ -9,8 +6,8 @@ $("#search").on('click', '.result', function(e) {
         url: 'php/selectSong.php',
         data: { selection: $(this).data('song_id') },
         success: function(response) {
-            //testbtn();
-            loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID());
+            console.log(response);
+            loadPlaylist("php/loadPlaylist.php");
         },
         error: function(error) {
             
