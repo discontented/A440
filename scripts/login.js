@@ -25,7 +25,7 @@ function postForm(targetForm, phpURL) {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                window.location = "main.html";
+                //window.location = "main.html";
             },
             error: function (data) {
                 console.log(data.responseText);
