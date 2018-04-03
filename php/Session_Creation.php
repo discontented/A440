@@ -17,6 +17,7 @@
 
     $_SESSION['SessionID']= $SessionID_Get;
     $_SESSION['UserID']= $UserID_Get;
+    $_SESSION['host'] = true;
 
 
 

@@ -4,6 +4,7 @@ function loadPlaylist(phpURL, session_id) {
         url: phpURL,
         data: {session_id: session_id},
         success: function (response) {
+            console.log(response);
             var results = eval(response);
             
             //clears out playlist of any previous entries.
