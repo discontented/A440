@@ -12,5 +12,5 @@ function logOut(phpURL) {
         })
     })
 };
-
+logOut("php/LogOut.php");
 
