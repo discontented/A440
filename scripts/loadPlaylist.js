@@ -17,11 +17,6 @@ function loadPlaylist(phpURL, session_id) {
     });
 }
 
-<<<<<<< HEAD
-$(function () {
-    var thisSession = new Session();
-    loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
-=======
 function getSongURL(phpURL, songID, session_id) {
     $.ajax({
         method: "POST",
@@ -51,9 +46,7 @@ function loadSong(phpURL, songURL) {
     $("#player").find("audio").html(audioSource(songUrl));
 }
     
-
 $(function () {
     var thisSession = new Session();
     loadPlaylist("php/loadPlaylist.php", thisSession.sessionID);
->>>>>>> 1faf6bfdfc1741f39648449b95a43584d577a8fa
 });
