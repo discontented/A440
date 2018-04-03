@@ -25,7 +25,7 @@ function postForm(targetForm, phpURL) {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                //window.location = "main.html";
+                window.location = "main.html";
             },
             error: function (data) {
                 console.log(data.responseText);
@@ -36,6 +36,6 @@ function postForm(targetForm, phpURL) {
 
 //postForm("#hostForm", "php/receivePost.php");
 postForm("#hostForm", "php/hostLogin.php");
-postForm("#guestForm", "php/receivePost.php");
+postForm("#guestForm", "php/guestLogin.php");
 
 
