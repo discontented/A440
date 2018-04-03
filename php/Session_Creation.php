@@ -10,7 +10,7 @@
     $result = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($result);
 
-    if(!$row){
+    if($row['UserID']!=NULL){
         $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('test', '$true');";
         mysqli_query($conn, $sql_Participant); 
     }
