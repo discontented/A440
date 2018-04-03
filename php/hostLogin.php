@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
     include_once 'mySqlLogin.php';
     $userName = $_POST['username'];
     $true = true; 

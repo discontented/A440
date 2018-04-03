@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("mySqlLogin.php");
 
 ini_set('display_errors', 'On');

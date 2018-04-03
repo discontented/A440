@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $sql_select_id = "SELECT * FROM Room WHERE SessionID=(SELECT MAX(SessionID) FROM Room);";
     $result_id = mysqli_query($conn, $sql_select_id);
     $row_id = mysqli_fetch_assoc($result_id);
