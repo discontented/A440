@@ -13,10 +13,10 @@
  */
 class Song {
 
-    private $songID;
-    private $title;
-    private $artist;
-    private $numVotes;
+    public $songID;
+    public $title;
+    public $artist;
+    public $numVotes;
     private $db;
 
     function __construct($db, $songID) {
