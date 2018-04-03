@@ -1,143 +1,12 @@
 @charset "utf-8";
 
-h1 {
-    text-align:center;
-    color:#FFF;
-    font-family:Tahoma, Geneva, sans-serif;
-    font-weight:lighter;
-    font-size:32px;
-    font-variant:small-caps;
-}
-
-table {
-    width:40%;
-    padding:10px;
-}
-
-td a {
-    color:#FFF;
-    text-decoration:none;
-}
-
-td a:hover {
-    background-color:#FFF;
-    -webkit-transition: background-color 1200ms linear;
-    -ms-transition: background-color 1200ms linear;
-    transition: background-color 1200ms linear;
-    color:#000;
-    -webkit-transition:color 1200ms linear;
-    -ms-transition:color 1200ms linear;
-    transition:color 1200ms linear;
-
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image:url(images/woodguitar2.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-}
-
-footer {
-    color:#FFF;
-    font-family:Tahoma, Geneva, sans-serif;
-    font-size:16px;
-    text-align:center;
-    padding:5px;
-    position:absolute;
-    width:97%;
-    bottom:0;
-    text-align:center;
-}
-
-#menu {
-    color:#FFF;
-    font-weight:700;
-    width:100%;	
-    height:50px;
-    border:3px solid #FFF;
-    background-color:#000;
-    margin:auto;
-    text-align:center;
-}
-
-#playlist {
-    width:75%;	
-    height:50%;
-    min-width:200px;
-    min-height:300px;
-    border:3px solid #000;
-    background-color:#FFF;
-    margin:auto;
-    opacity:.7;
-    margin-top:10px;
-    text-align:center;
-}
-
-.songBox {
-    border:2px solid black;
-    width:100%;
-    display:flex;
-
-}
-
-.songTitle {
-    width:65%;
-    padding-top:1%;
-    padding-bottom:1%;
-    padding-left:2%;
-    border:2px dashed black;
-    color: #000;
-    float:left;
-    overflow:hidden;
-
-}
-
-.upVote {
-    padding-top:1%;
-    padding-bottom:1%;
-    padding-left:2%;
-    width:15%;
-    border:2px dashed black;
-    overflow:hidden;
-    float:left;
-
-}
-
-.voteNum {
-    padding-top:1%;
-    padding-bottom:1%;
-    padding-left:2%;
-    width:20%;
-    border:2px dashed black;
-    overflow:hidden;
-    float:left;
-}
-
-#search{
-    display: flex;
-    flex-direction: column;
-    flex: 1;    
-    margin:auto;
-    opacity:.8;
-    margin-top:10px;
-    text-align:center;
-}
-
-#player {
-    width:45%;	
-    height:35%;
-    min-width:125px;
-    min-height:100px;
-    border:3px solid #000;
-    background-color:#FFF;
-    margin:auto;
-    opacity:.7;
-    margin-top:10px;
-    text-align:center;
-
+    background-image: url(images/woodguitar2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
 }
 
 #maincontainer {
@@ -151,27 +20,104 @@ footer {
     padding-top:5%;
 }
 
-input[type=button], input[type=submit], input[type=reset] {
+/* Menu */
+
+#menu {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    color:#FFF;
+    font-weight:700;
+    width:100%;	
+    height:50px;
+    border:3px solid #FFF;
+    background-color:#000;
+    margin:auto;
+    text-align:center;
+}
+
+.menuCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem {
+    flex: 1;
+}
+
+/* Playlist */
+
+#playlist {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 50%;
+    min-width: 200px;
+    min-height: 300px;
+    border: 3px solid #000;
     background-color: #FFF;
-    border:3px solid #000;
+    margin: auto;
+    opacity: .7;
+    margin-top: 10px;
+    text-align: center;
 }
 
-input {
-    margin: 5px;
-    border:3px solid #000;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+/* Playlist Row */
 
+.songBox {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 100%;
+    max-height: 3em;
+    overflow: hidden;
 }
 
-input:focus {
-    border:4px solid #FFF;
-    background-color:#E9E9E9;
-
+.songTitle {
+    flex: 2;
+    padding: 1% 2%;
+    border: 2px dashed black;
 }
 
-select {
-    border:3px solid #000;
+.upVote {
+    flex: 1;
+    padding: 1% 2%;
+    overflow: hidden;
+    background-color: black;
+    -webkit-mask: url(images/svg/upvote.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask: url(images/svg/upvote.svg);
+    mask-position: center;
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}
+
+.voteNum {
+    flex: 1;
+    padding: 1% 2%;
+    border: 2px dashed black;
+}
+
+.on {
+    background-color: green;
+}
+
+/* End of Playlist */
+
+/* Search */
+
+#search {
+    display: flex;
+    flex-direction: column;
+    flex: 1;    
+    margin: auto;
+    opacity: .8;
+    margin-top: 10px;
+    text-align: center;
 }
 
 #searchResults {
@@ -186,5 +132,56 @@ select {
 
 .result {
     flex: 1;
-    border 1px solid #000;
+    border: 1px solid #000;
 }
+
+/* End of Search */
+
+#player {
+    width: 45%;	
+    height: 35%;
+    min-width: 125px;
+    min-height: 100px;
+    border: 3px solid #000;
+    background-color: #FFF;
+    margin: auto;
+    opacity: .7;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Individual Element Styles */
+
+h1 {
+    text-align:center;
+    color:#FFF;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-weight:lighter;
+    font-size:32px;
+    font-variant:small-caps;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #FFF;
+    border:3px solid #000;
+}
+
+input {
+    margin: 5px;
+    border:3px solid #000;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+select {
+    border:3px solid #000;
+}
+
+/* Animations */
+
+input:focus {
+    border:4px solid #FFF;
+    background-color:#E9E9E9;
+}
+
+

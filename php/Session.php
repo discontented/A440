@@ -6,8 +6,8 @@ class Session {
     private $db;
 
     function __construct($db, $session_id) {
-        $this->session_id = $session_id;
         $this->db = $db;
+        $this->session_id = $session_id;
     }
 
     public function getSessionID() {
@@ -16,27 +16,77 @@ class Session {
 
     public function getUsers() {
         try {
-            $results = $this->db->query("SELECT Participant.username
-FROM Session_Guest
-JOIN Participant ON Session_Guest.User_ID = Participant.User_ID
-WHERE Session_Guest.Session_ID = ?", $this->session_id);
+            $query = "
+                SELECT Participant.username, Participant.host
+                FROM Session_Guest
+                JOIN Participant
+                ON Session_Guest.User_ID = Participant.User_ID
+                WHERE Session_Guest.Session_ID = :sessionID
+                ";
+            $st = $this->db->prepare($query);
+            $st->bindParam(":sessionID", $this->session_id, PDO::PARAM_INT);
+            $st->execute();
         } catch (Exception $ex) {
             echo $ex->getMessage();
             exit;
         }
 
-        return $results->fetchAll(PDO::FETCH_ASSOC);
+        return $st->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getGuests() {
+        try {
+            $query = "
+                SELECT Participant.username
+                FROM Session_Guest
+                JOIN Participant
+                ON Session_Guest.User_ID = Participant.User_ID
+                WHERE Session_Guest.Session_ID = :sessionID
+                AND Participant.host = false
+                ";
+            $st = $this->db->prepare($query);
+            $st->bindParam(":sessionID", $this->session_id, PDO::PARAM_INT);
+            $st->execute();
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            exit;
+        }
+
+        return $st->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getHost() {
+        try {
+            $query = "
+                SELECT Participant.username
+                FROM Session_Guest
+                JOIN Participant
+                ON Session_Guest.User_ID = Participant.User_ID
+                WHERE Session_Guest.Session_ID = :sessionID
+                AND Participant.host = true
+                ";
+            $st = $this->db->prepare($query);
+            $st->bindParam(":sessionID", $this->session_id, PDO::PARAM_INT);
+            $st->execute();
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            exit;
+        }
+
+        return $st->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function sessionExists() {
         try {
-            $results = $this->db->query("SELECT * FROM Room WHERE Session_ID = ?", $this->session_id);
+            $st = $this->db->prepare("SELECT * FROM Room WHERE Session_ID = :sessionID");
+            $st->bindParam(":sessionID", $this->session_id, PDO::PARAM_INT);
+            $st->execute();
         } catch (Exception $ex) {
             echo $ex->getMessage();
             exit;
         }
 
-        if ($results->numRows >= 1) {
+        if ($st->rowCount() >= 1) {
             return true;
         } else {
             return false;

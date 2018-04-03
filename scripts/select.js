@@ -1,14 +1,14 @@
+//add song to the playlist
 $("#search").on('click', '.result', function(e) {
     e.preventDefault();
-    var selection = $(this).data('song_id');
     
     $.ajax({
         method: 'POST',
         url: 'php/selectSong.php',
-        data: { selection: selection },
+        data: { selection: $(this).data('song_id') },
         success: function(response) {
             console.log(response);
-            $("#playlist").append("<div class='songBox'><div class='songTitle'>" + response[0]['track_name'] + "</div><div class='upVote'></div><div class='voteNum'></div></div>");
+            $("#playlist").append(songBox(response[0]['songID'], response[0]['track_name'], null));
         }
     });
 });
