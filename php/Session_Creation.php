@@ -1,8 +1,6 @@
 <?php
 
-include_once 'hostLogin.php';
-    $userName = $_POST['username'];
-    $true = true; 
+    include_once 'hostLogin.php';
 
     $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
     mysqli_query($conn, $sql_Participant); 
