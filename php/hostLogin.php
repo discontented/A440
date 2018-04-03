@@ -3,9 +3,9 @@
     include_once 'mySqlLogin.php';
     $userName = $_POST['username'];
     $true = true; 
-    $sql_select = "SELECT * FROM Participant";
-    $result = mysqli_query($conn, $sql_select);
-    echo($result);
+    //$sql_select = "SELECT * FROM Participant";
+    //$result = mysqli_query($conn, $sql_select);
+    //echo($result);
     //if(mysqli_num_rows($result) > 0 ){
         //throws ERROR, User already logged in
         //header("Location: /index.html?signup=usertaken");
