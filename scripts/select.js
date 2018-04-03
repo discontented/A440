@@ -12,6 +12,7 @@ $("#search").on('click', '.result', function(e) {
             loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
         },
         error: function(error) {
+            url: 'php/testbtn.php',
             console.log(error);
         }
     });
