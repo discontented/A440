@@ -9,7 +9,7 @@ $("#search").on('click', '.result', function(e) {
         success: function(response) {
             console.log(response);
             if(response)
-            $("#playlist").append(songBox(response[0]['song_id'], response[0]['track_name'], response[0]['votes']));
+            loadPlaylist("php/loadPlaylist.php", session1.getSessionID);
         },
         error: function(error) {
             console.log(error);
