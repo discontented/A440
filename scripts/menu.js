@@ -28,4 +28,3 @@ function Session() {
 
 var session1 = new Session();
 session1.getSessionID('php/getSession.php');
-session1.getHost("php/getHost.php");
