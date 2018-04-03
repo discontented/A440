@@ -7,6 +7,7 @@ function Session() {
             url: phpURL,
             type: 'POST',
             success: function (response) {
+                console.log(response);
                 sessionID = response;
                 $("#roomNumber").text(sessionID);
             }
