@@ -9,13 +9,10 @@ function Session() {
             success: function (response) {
                 console.log(response);
                 sessionID = response;
+                $("#roomNumber").text(sessionID);
             }
         });
     };
-
-    this.showSessionID = function() {
-        $("#roomNumber").text(sessionID);
-    }
 
     this.getHost = function (phpURL) {
         $.ajax({
@@ -33,5 +30,4 @@ function Session() {
 $(function() {
     var thisSession = new Session();
     thisSession.getSessionID('php/getSession.php');
-    thisSession.showSessionID();
 })
