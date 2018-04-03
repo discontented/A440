@@ -1,4 +1,3 @@
-//add song to the playlist
 $("#search").on('click', '.result', function(e) {
     e.preventDefault();
     
