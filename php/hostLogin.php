@@ -6,7 +6,7 @@
     $sql_select = "SELECT * FROM Participant WHERE username='$userName'";
     $result = mysqli_query($conn, $sql_select);
     //echo($result);
-    if(mysqli_num_rows($result) > 0 ){
+    if(!$row = mysqli_fetch_assoc($result)){
         //throws ERROR, User already logged in
         echo("Your username is already take");
         exit;
