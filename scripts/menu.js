@@ -33,5 +33,5 @@ function Session() {
 $(function() {
     var thisSession = new Session();
     thisSession.getSessionID('php/getSession.php');
-    this.showSessionID();
+    thisSession.showSessionID();
 })
