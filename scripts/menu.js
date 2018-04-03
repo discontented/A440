@@ -20,7 +20,6 @@ function Session() {
             success: function (response) {
                 var result = eval(response);
                 console.log(result);
-                
                 $("#hostName").text(hostName);
             }
         });
@@ -29,4 +28,4 @@ function Session() {
 
 var session1 = new Session();
 session1.getSessionID('php/getSession.php');
-session1.getHost("php/getHost.php");
+// session1.getHost("php/getHost.php");
