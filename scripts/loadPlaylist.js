@@ -48,5 +48,5 @@ function loadSong(phpURL, songURL) {
     
 $(function () {
     var thisSession = new Session();
-    loadPlaylist("php/loadPlaylist.php", thisSession.sessionID);
+    loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
 });
