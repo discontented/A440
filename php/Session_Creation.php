@@ -1,5 +1,6 @@
 <?php
 
+    include 'mySqlLogin.php';
     $userName = $_POST['username'];
     $sql_select_id = "SELECT * FROM Room WHERE SessionID=(SELECT MAX(SessionID) FROM Room);";
     $result_id = mysqli_query($conn, $sql_select_id);
