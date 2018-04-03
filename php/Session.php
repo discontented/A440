@@ -5,7 +5,7 @@ class Session {
     private $session_id;
     private $db;
 
-    function __construct($db, $session_id) {
+    function __construct($db) {
         $this->db = $db;
         $this->session_id = $_SESSION['SessionID'];
     }

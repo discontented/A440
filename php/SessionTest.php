@@ -1,17 +1,13 @@
 <?php
 
-require 'dbConnect.php';
+require_once(dirname(dirname(__FILE__)).'dbConnect.php');
 
-require 'Session.php';
+require '../Session.php';
 
-$session1 = new Session($db, "1");
+$session1 = new Session($db);
 
-echo $session1->sessionExists();
+echo $session1->getSessionID();
 
-echo "Users<br>";
-var_dump($session1->getUsers());
-
-echo "<br>Host<br>";
 var_dump($session1->getHost());
 
 ?>

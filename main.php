@@ -17,11 +17,11 @@
         <div id="menu">
             <div class="menuCol">
                 <div class="menuItem">Room Number</div>
-                <div class="menuItem" id="roomNumber">1</div>
+                <div class="menuItem" id="roomNumber"></div>
             </div>
             <div class="menuCol">
                 <div class="menuItem">Host</div>
-                <div class="menuItem" id="hostName">2</div>
+                <div class="menuItem" id="hostName"></div>
             </div>
           <div class="menuCol">
             <form action="php/LogOut.php" method="">
@@ -76,6 +76,7 @@
             <script src="scripts/select.js"></script>
             <script src="scripts/upvote.js"></script>
             <script src="scripts/logout.js"></script>
+            <script src="scripts/menu.js"></script>
 
     </body>
 
