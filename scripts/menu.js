@@ -7,6 +7,7 @@ function Session() {
             url: phpURL,
             type: 'POST',
             success: function (response) {
+                console.log(response);
                 sessionID = response;
                 $("#roomNumber").text(sessionID);
             }
@@ -20,13 +21,12 @@ function Session() {
             success: function (response) {
                 var result = eval(response);
                 console.log(result);
-                
                 $("#hostName").text(hostName);
             }
         });
     };
 }
-
-var session1 = new Session();
-session1.getSessionID('php/getSession.php');
-session1.getHost("php/getHost.php");
+$(function() {
+    var session1 = new Session();
+    session1.getSessionID('php/getSession.php');
+})

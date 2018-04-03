@@ -18,7 +18,6 @@ function loadPlaylist(phpURL, session_id) {
 }
 
 $(function () {
-    var session_id = 1;
-    
-    loadPlaylist("php/loadPlaylist.php", session_id);
+    var thisSession = new Session();
+    loadPlaylist("php/loadPlaylist.php", thisSession.getSessionID);
 });

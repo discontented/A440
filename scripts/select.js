@@ -7,8 +7,10 @@ $("#search").on('click', '.result', function(e) {
         url: 'php/selectSong.php',
         data: { selection: $(this).data('song_id') },
         success: function(response) {
-            console.log(response);
-            $("#playlist").append(songBox(response[0]['songID'], response[0]['track_name'], null));
+            loadPlaylist("php/loadPlaylist.php", session1.getSessionID);
+        },
+        error: function(error) {
+            console.log(error);
         }
     });
 });
