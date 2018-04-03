@@ -3,7 +3,7 @@
 require 'dbConnect.php';
 require 'Playlist.php';
 
-$playlist = new Playlist($db, 1);
+$playlist = new Playlist($db);
 
 $playlist->addSong(2);
 
