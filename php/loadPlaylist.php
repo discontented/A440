@@ -5,6 +5,6 @@ require 'Playlist.php';
 
 $playlist = new Playlist($db);
 
-echo json_encode($playlist->getSongs());
+//echo json_encode($playlist->getSongs());
 
 ?>
