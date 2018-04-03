@@ -6,7 +6,7 @@ require "Song.php";
 
 require "Playlist.php";
 
-$selection = new Song($db, $_POST['song_id']);
+$selection = new Song($db, $_POST['selection']);
 
 $sessionPlaylist = new Playlist($db);
 
