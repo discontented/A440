@@ -13,10 +13,14 @@
     //} else {
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
         mysqli_query($conn, $sql); 
-        echo($user);
+        $sql_select = "SELECT * FROM Participant WHERE username='$userName'";
+        $result = mysqli_query($conn, $sql_select);
+        $row = mysqli_fetch_assoc($result);
+        //echo($user);
         $sql = "INSERT INTO Room (time_stamp) VALUES ('NULL');";
         mysqli_query($conn, $sql); 
-      
+        $sql = "INSERT INTO Session_Guest (User_ID, Session_ID) VALUES ($row['User_ID']','0'');";
+        mysqli_query($conn, $sql); 
     //}
     
     ?>
