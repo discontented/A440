@@ -8,7 +8,7 @@ $("#search").on('click', '.result', function(e) {
         data: { selection: $(this).data('song_id') },
         success: function(response) {
             console.log(response);
-            $("#playlist").append(songBox(response[0]['songID'], response[0]['track_name'], null));
+            $("#playlist").append(songBox(response[0]['song_id'], response[0]['track_name'], response[0]['votes']));
         }
     });
 });
