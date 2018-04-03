@@ -16,7 +16,7 @@ $sql = "DELETE FROM `Session_Guest` WHERE `Session_Guest`.`UserID` = $GuestID AN
 mysqli_query($conn, $sql);
 $sql = "DELETE FROM `Participant` WHERE `Participant`.`UserID` = $GuestID;";
 mysqli_query($conn, $sql);
-if($IsHost){
+if($IsHost==1){
     $sql = "DELETE FROM `Room` WHERE `Room`.`SessionID` = $SessionID_Get;";
     mysqli_query($conn, $sql);
 } else {
