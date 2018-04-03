@@ -20,7 +20,7 @@
                 <div class="menuItem" id="roomNumber"></div>
             </div>
             <div class="menuCol">
-                <div class="menuItem">Host</div>
+                <div class="menuItem">Session_ID</div>
                 <div class="menuItem" id="hostName"></div>
             </div>
           <div class="menuCol">
