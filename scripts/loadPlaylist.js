@@ -4,7 +4,7 @@ function loadPlaylist(phpURL, session_id) {
         url: phpURL,
         data: {session_id: session_id},
         success: function (response) {
-            var results = eval(response);
+            var results = $.parseJSON(response);
             
             //clears out playlist of any previous entries.
             $("#playlist").empty();
