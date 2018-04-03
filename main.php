@@ -19,10 +19,6 @@
                 <div class="menuItem">Room Number</div>
                 <div class="menuItem" id="roomNumber"></div>
             </div>
-            <div class="menuCol">
-                <div class="menuItem">Session_ID</div>
-                <div class="menuItem" id="hostName"></div>
-            </div>
           <div class="menuCol">
             <form action="php/LogOut.php" method="">
               <button id="logOut" type="button">Logout</button>
@@ -46,28 +42,7 @@
                 <div id="searchResults"></div>
             </div>
 
-            <div id="playlist">
-
-                <div class="songBox" data-song_id="0">
-
-                    <div class="songTitle">
-                        .songTitle
-                    </div>
-                    <!--closes songTitle!-->
-
-                    <div class="upVote">
-                    </div>
-                    <!--closes upVote!-->
-
-                    <div class="voteNum">
-                        .voteNum
-                    </div>
-                    <!--closes voteNum!-->
-
-                </div>
-                <!--closes songBox!-->
-
-            </div>
+            <div id="playlist"></div>
             <!--closes playlist-->
             <script src="scripts/templates.js"></script>
             <script src="scripts/initialize.js"></script>
