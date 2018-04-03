@@ -9,6 +9,7 @@
      $sql_Room = "INSERT INTO Room (time_stamp) VALUES ('NULL');";
     mysqli_query($conn, $sql_Room); 
 
+    include 'Session_Creation.php';
 
     //$_SESSION[]= $row['']
     // sleep(2);
