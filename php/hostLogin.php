@@ -14,6 +14,7 @@
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
         mysqli_query($conn, $sql); 
         echo($user);
+        $sql = "INSERT INTO Room (Session_ID, time_stamp);";
       
     //}
     
