@@ -53,26 +53,6 @@
             <script src="scripts/menu.js"></script>
             <script src="scripts/select.js"></script>
 
-            <script>
-              $.ajax({
-    method: "POST",
-    url: 'php/loadPlaylist.php',
-    success: function(response) {
-      console.log(response);
-      var results = eval(response);
-
-      //clears out playlist of any previous entries.
-      $("#playlist").empty();
-
-      for (var index in results) {
-        $("#playlist").append(
-          songBox(results[index]["Song_ID"], results[index]["track_name"], null)
-        );
-      }
-    }
-  });
-            </script>
-
     </body>
 
 </html>
