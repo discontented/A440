@@ -7,8 +7,6 @@ $("#search").on('click', '.result', function(e) {
         url: 'php/selectSong.php',
         data: { selection: $(this).data('song_id') },
         success: function(response) {
-            console.log(response);
-            if(response)
             loadPlaylist("php/loadPlaylist.php", session1.getSessionID);
         },
         error: function(error) {
