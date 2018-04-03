@@ -1,9 +1,8 @@
-function logOut(phpURL, userID) {
+function logOut(phpURL) {
     $("#logOut").click(function() {
         $.ajax({
             url: phpURL,
-            type: 'POST', 
-            data: {userID : userID },
+            type: 'POST',
             success: function(data) {
                 window.location = "index.php";
             },
