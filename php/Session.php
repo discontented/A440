@@ -7,7 +7,7 @@ class Session {
 
     function __construct($db, $session_id) {
         $this->db = $db;
-        $this->session_id = $session_id;
+        $this->session_id = $_SESSION['SessionID'];
     }
 
     public function getSessionID() {
