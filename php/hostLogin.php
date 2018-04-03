@@ -8,7 +8,7 @@
     //echo($result);
     if(mysqli_num_rows($result) > 0 ){
         //throws ERROR, User already logged in
-        $_POST['username']= "User already logged in";
+        echo("Your username is already take");
         exit;
     } else {
         $sql = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
