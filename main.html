@@ -1,68 +1,75 @@
 <!doctype html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project_A440</title>
-  <link rel="stylesheet" href="mainCSS.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Project_A440</title>
+        <link rel="stylesheet" href="mainCSS.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
 
-<body>
+    <body>
 
-  <div id="menu">
-    menu #id = "menu"
-  </div>
-
-  <div id="maincontainer">
-
-    <div id="player">
-      <audio controls autoplay>
-
-      </audio>
-    </div>
-
-    <div id="search">
-      <form action="" method="">
-        <input type="text" placeholder="Search.." name="search" id="searchBox" style="opacity:.8; text-align:center;">
-        <button id="searchTrack">Search Tracks</button>
-        <button id="searchArtist">Search Artists</button>
-      </form>
-
-      <div id="searchResults"></div>
-    </div>
-
-    <div id="playlist">
-
-      <div class="songBox" data-song_id="0">
-
-        <div class="songTitle">
-          .songTitle
+        <div id="menu">
+            <div class="menuCol">
+                <div class="menuItem">Room Number</div>
+                <div class="menuItem" id="roomNumber">1</div>
+            </div>
+            <div class="menuCol">
+                <div class="menuItem">Host</div>
+                <div class="menuItem" id="hostName">2</div>
+            </div>
         </div>
-        <!--closes songTitle!-->
 
-        <div class="upVote">
-        </div>
-        <!--closes upVote!-->
+        <div id="maincontainer">
 
-        <div class="voteNum">
-          .voteNum
-        </div>
-        <!--closes voteNum!-->
+            <div id="player">
+                <audio controls autoplay>
 
-      </div>
-      <!--closes songBox!-->
+                </audio>
+            </div>
 
-    </div>
-    <!--closes playlist-->
-<script src="scripts/templates.js"></script>
-<script src="scripts/initialize.js"></script>
-<script src="scripts/loadPlaylist.js"></script>
-<script src="scripts/search.js"></script>
-<script src="scripts/select.js"></script>
-<script src="scripts/upvote.js"></script>
-    
-</body>
+            <div id="search">
+                <form action="" method="">
+                    <input type="text" placeholder="Search.." name="search" id="searchBox" style="opacity:.8; text-align:center;">
+                    <button id="searchTrack">Search Tracks</button>
+                    <button id="searchArtist">Search Artists</button>
+                </form>
+
+                <div id="searchResults"></div>
+            </div>
+
+            <div id="playlist">
+
+                <div class="songBox" data-song_id="0">
+
+                    <div class="songTitle">
+                        .songTitle
+                    </div>
+                    <!--closes songTitle!-->
+
+                    <div class="upVote">
+                    </div>
+                    <!--closes upVote!-->
+
+                    <div class="voteNum">
+                        .voteNum
+                    </div>
+                    <!--closes voteNum!-->
+
+                </div>
+                <!--closes songBox!-->
+
+            </div>
+            <!--closes playlist-->
+            <script src="scripts/templates.js"></script>
+            <script src="scripts/initialize.js"></script>
+            <script src="scripts/loadPlaylist.js"></script>
+            <script src="scripts/search.js"></script>
+            <script src="scripts/select.js"></script>
+            <script src="scripts/upvote.js"></script>
+
+    </body>
 
 </html>
