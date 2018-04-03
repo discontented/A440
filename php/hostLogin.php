@@ -4,7 +4,7 @@
     $userName = $_POST['username'];
     $true = true; 
 
-    $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$userName', '$true');";
+    $sql_Participant = "INSERT INTO Participant (username, host) VALUES ('$db_hostname', '$true');";
     mysqli_query($conn, $sql_Participant); 
      $sql_Room = "INSERT INTO Room (time_stamp) VALUES ('NULL');";
     mysqli_query($conn, $sql_Room); 
