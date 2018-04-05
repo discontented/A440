@@ -3,6 +3,7 @@
 require_once 'dbConnect.php';
 require_once 'Playlist.php';
 
-$playlist = new Playlist($db, $_POST['session_id']);
+$song = new Song($db, $_POST['songID']);
+return $song->getURL();
 
 ?>

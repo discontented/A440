@@ -28,8 +28,8 @@
 
         <div id="maincontainer">
             <div id="player">
-                <audio controls autoplay>
-                <source src="../music/Never_Gonna_Give_You_Up.mp3" type="audio/mp3">
+                <audio id="audio" controls autoplay>
+                
                 </audio>
             </div>
 
@@ -45,6 +45,11 @@
 
             <div id="playlist"></div>
             <!--closes playlist-->
+            
+            <!--JS functions-->
+            <script src="scripts/functions.js"></script>
+            
+            <!--JS Scripts-->
             <script src="scripts/templates.js"></script>
             <script src="scripts/initialize.js"></script>
             <script src="scripts/loadPlaylist.js"></script>
@@ -53,6 +58,7 @@
             <script src="scripts/logout.js"></script>
             <script src="scripts/menu.js"></script>
             <script src="scripts/select.js"></script>
+            <script src="scripts/playlist.js"></script>
 
     </body>
 

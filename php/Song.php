@@ -66,7 +66,8 @@ class Song {
             echo $ex->getMessage();
             exit;
         }
-        
+
         return $st->fetchAll(PDO::FETCH_ASSOC);
-        }
     }
+
+}
