@@ -1,6 +1,6 @@
 
 <?php
-    session_start();
+session_start();
 ?>
 
 
@@ -16,7 +16,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
-    
+
     <body>
         <div id="container">
             <div id="header"></div>
@@ -85,14 +85,13 @@
 
         </div> <!-- End of container -->
 
-
+        <!--JS functions-->
+        <script src="scripts/functions.js"></script>
+        <!--JS scripts-->
+        <script src="scripts/login.js"></script>
+        <script src="scripts/initialize.js"></script>
+        <script src="scripts/aesthetics.js"></script>
 
     </body>
-
-    <!-- After removing embedded JS and CSS -->
-    <script src="scripts/login.js"></script>
-    <script src="scripts/initialize.js"></script>
-    <script src="scripts/aesthetics.js"></script>
-    
 
 </html>

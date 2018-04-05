@@ -1,16 +1,18 @@
 <?php
+session_start();
 
-require('dbConnect.php');
+require_once 'dbConnect.php';
 
 class Playlist {
+
     private $db;
     private $sessionID;
-    
+
     function __construct($db) {
         $this->db = $db;
         $this->sessionID = $_SESSION['SessionID'];
     }
-    
+
     public function getSongs() {
         try {
             $query = "SELECT Song.Song_ID, Song.track_name
@@ -24,16 +26,31 @@ class Playlist {
             echo $ex->getMessage();
             exit;
         }
-        
+
         return $st->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
     public function addSong($songID) {
         try {
             $query = "INSERT INTO Session_Song
                         (Session_ID, Song_ID)
                     VALUES
                         (:sessionID, :songID)";
+            $st = $this->db->prepare($query);
+            $st->bindParam(":sessionID", $this->sessionID);
+            $st->bindParam(":songID", $songID);
+            $st->execute();
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            exit;
+        }
+    }
+
+    public function removeSong($songID) {
+        try {
+            $query = "DELETE FROM Session_Song
+                WHERE Session_ID = :sessionID AND Song_ID = :songID
+                ";
             $st = $this->db->prepare($query);
             $st->bindParam(":sessionID", $this->sessionID);
             $st->bindParam(":songID", $songID);
