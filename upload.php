@@ -15,22 +15,6 @@ if(isset($_POST['save_audio']) && $_POST['save_audio']=="Upload Audio")
          echo "upload unsuccessful";
      }
 }
-function displayAudios()
-{
-    $conn=mysqli_connect('localhost','root','harmony','A440');
-    if(!$conn)
-    {
-        die('server not connected');
-    }
-    $query="select * from Song";
-    $r=mysqli_query($conn,$query);
-    while($row=mysqli_fetch_array($r))
-    {
-        echo $row['mp3_file'];
-        echo "<br/>";
-    }
-    mysqli_close($conn);
-}
 function saveAudio($track_name,$mp3_file)
 {
     $conn=mysqli_connect('localhost','root','harmony','A440');
